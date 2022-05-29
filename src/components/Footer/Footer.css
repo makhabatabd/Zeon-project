@@ -22,6 +22,10 @@
     align-items: center;
 }
 
+.footer-inner-part1 {
+    margin-top: 30px;
+}
+
 .contacts {
     display: flex;
     align-items: center;
@@ -45,11 +49,24 @@
     margin: 0;
 }
 
+.footer-offerta {
+    display: none;
+}
+
 
 @media screen and (max-width: 320px) {
     .footer {
         padding: 24px 16px;
     }
+
+    .footer-offerta {
+        display: block;
+    }
+
+    .footer h5 {
+        margin: 24px 0 18px 0;
+    }
+
 
     .footer-inner {
         flex-direction: column;
@@ -57,7 +74,7 @@
     }
 
     .fotter-bottom {
-        border-top: 1px solid white;
+        border-top: 1px solid #363635;
         margin-top: 25px;
         padding-top: 16px;
     }

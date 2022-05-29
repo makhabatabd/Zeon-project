@@ -4,9 +4,6 @@ import { Breadcrumbs, Typography, Link } from "@mui/material";
 import "./Breadcrumbs.css";
 
 function toTitleCase(str) {
-  // return str.replace(/\b\w+/g, function (s) {
-  //   return s.charAt(0).toUpperCase() + s.substr(1).toLowerCase();
-  // });
   if (str === "about") {
     return "О нас";
   }
@@ -19,6 +16,15 @@ function toTitleCase(str) {
   if (str === "offerta") {
     return "Публичная офферта";
   }
+  if (str === "slider") {
+    return "slider";
+  }
+  if (str === "collection") {
+    return "Коллекции";
+  }
+  if (str === "summer") {
+    return "Лето 2022";
+  }
 }
 
 export default function BasicBreadCrumbs() {
@@ -27,7 +33,10 @@ export default function BasicBreadCrumbs() {
   return (
     <div className="container">
       {pathnames.length > 0 ? (
-        <Breadcrumbs className="breadcrumps" style={{ margin: "21px 0" }}>
+        <Breadcrumbs
+          className="breadcrumps"
+          style={{ margin: "21px 0", textDecoration: "none" }}
+        >
           <Link
             style={{ textDecoration: "none", color: "#393939" }}
             className="link"
@@ -36,6 +45,16 @@ export default function BasicBreadCrumbs() {
           >
             Главная
           </Link>
+          {location.pathname == "/summer" ? (
+            <Link
+              style={{ textDecoration: "none", color: "#393939" }}
+              className="link"
+              component={RouterLink}
+              to="/collection"
+            >
+              Коллекции
+            </Link>
+          ) : null}
           {pathnames.map((value, index) => {
             const last = index === pathnames.length - 1;
             const to = `/${pathnames.slice(0, index + 1).join("/")}`;

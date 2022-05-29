@@ -1,0 +1,10 @@
+.slider-main-div {
+    display: flex;
+    background-color: #E0E0E0;
+    justify-content: center;
+}
+
+.slider-main-div img {
+    width: 80%;
+    z-index: 0;
+}

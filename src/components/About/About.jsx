@@ -1,25 +1,35 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import "./About.css"
 
 const About = () => {
+    const [about, setAbout] = useState([])
+    useEffect(() => {
+      axios.get("http://localhost:8000/about")
+        .then(response => {
+           setAbout(response.data)
+         })
+      }, [])
     return (
         <div className='about'>
             <div className='container'>
-                <div className='about-main-div'>
+                {about.map((item) => (
+                <div className='about-main-div' key={item.id}>
                     <div className='about-images'>
                         <div className='about-images-vertical'>
-                            <img className='about-first-pic' src={require('../../images/about-1.png')} alt="about pics" />
-                            <img className='about-second-pic' src={require('../../images/about-2.png')} alt="about pics" />
+                            <img className='about-first-pic' src={item.img1} alt="about pics" />
+                            <img className='about-second-pic' src={item.img2} alt="about pics" />
                         </div>
                         <div style={{height: "40%"}}>
-                            <img className='about-third-pic' src={require('../../images/about-3.png')} alt="about pics" />
+                            <img className='about-third-pic' src={item.img3} alt="about pics" />
                          </div>
                     </div>
                     <div className='about-text'>
-                        <h3>О нас</h3>
-                        <p>У нас Вы найдёте всё, что Вам так нужно. Ассортимент магазина постоянно расширяется и дополняется в зависимости от пожеланий клиентов. Женская одежда из наших коллекций – это комфортная, стильная и качественная одежда не только на каждый день, но и для любых ситуаций по доступным ценам.Натуральные материалы, продуманные силуэты, современный дизайн и возможность легкого сочетания моделей помогут Вам всегда оставаться в центре внимания и чувствовать себя уместно в любой ситуации.Если Вы любите одеваться ярко, модно и оригинально, у нас Вы найдете все необходимое, чтобы всегда быть в центре внимания. У нас большая коллекция для любого торжества и праздника, которая сможет удовлетворить вкус самой взыскательной модницы! А для деловых ситуаций, в которых Вам непременно нужно выглядеть элегантно и стильно, мы предлагаем Вам одежду из коллекции "деловой стиль и офис". Мода постоянно диктует нам свои требования и для современной девушки, желающей идти в ногу со временем, важно иметь возможность постоянно пополнять свой гардероб стильной одеждой.</p>
+                            <h3>{item.title}</h3>
+                            <p>{item.text}</p>
                     </div>
                 </div>
+                ))}
             </div>
         </div>
     );

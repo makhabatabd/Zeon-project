@@ -27,8 +27,10 @@ const Header = () => {
                                 <div className='header-top-left'>
                                     <Link style={{textDecoration: 'none'}} to={'/about'}>
                                         <span>О нас</span>
+                                        </Link>
+                                    <Link style={{textDecoration: 'none'}} to={'/collection'}>
+                                        <span>Коллекции</span>
                                     </Link>
-                                    <span>Коллекции</span>
                                     <Link style={{textDecoration: 'none'}} to={'/news'}>
                                        <span>Новости</span>
                                     </Link>
@@ -48,9 +50,11 @@ const Header = () => {
                                     <MenuIcon style={{padding:"6px"}}/>
                                     </div>
                                 </Hidden>
+                                <Link style={{textDecoration: 'none'}} to={'/'}>
                                 <div className='logo'>
-                                    <img src={item.logo} alt="the logo" />
+                                        <img width="162px" src={item.logo} alt="the logo" />
                                 </div>
+                                </Link>
                                 <div className='xs-search' >
                                     <span onClick={()=> setShowInput(v => !v)}>
                                     <SearchOutlinedIcon />
@@ -62,7 +66,7 @@ const Header = () => {
                                 <span className='icon'>
                                     <img width="26px" height="26px" src={require('../../images/small-header.png')} alt="search" />
                                 </span>
-                                <input className='input-field' placeholder='Поиск' type="text" />
+                                <input className='input-field' style={{background: "#F8F8F8", border: "1px solid #E0E0E0"}} placeholder='Поиск' type="text" />
                             </div>
                                 </div>
                             <Hidden xsDown smDown>

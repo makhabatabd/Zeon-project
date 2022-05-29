@@ -1,7 +1,25 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const NewsCard = ({item}) => {
-      const [hideText, setHideText] = useState(false);
+  const [hideText, setHideText] = useState(false);
+   const [deviceSize, changeDeviceSize] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const resizeW = () => changeDeviceSize(window.innerWidth);
+
+    window.addEventListener("resize", resizeW); // Update the width on resize
+
+    return () => window.removeEventListener("resize", resizeW);
+  });
+
+  useEffect(() => {
+    if (deviceSize === 320) {
+      setHideText( true )
+    } else if (deviceSize > 320) {
+      setHideText( false )
+    }
+  }, [])
+  
     return (
           <div className="news-parts-outter" key={item.id} >
             <div className="news-parts">

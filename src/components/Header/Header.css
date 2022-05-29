@@ -43,6 +43,10 @@
     height: 44px;
 }
 
+.input-field::placeholder {
+    padding-left: 20px;
+}
+
 
 .header-extra-info {
     display: flex;

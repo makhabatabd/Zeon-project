@@ -37,7 +37,7 @@ const News = () => {
       <div className="container">
         <p className="news-main-title">Новости</p>
         {photos.map((item) => (
-          <NewsCard item={item}/>
+          <NewsCard item={item} key={item.id}/>
           ))}
       </div>
     </div>
