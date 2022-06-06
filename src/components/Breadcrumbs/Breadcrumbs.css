@@ -7,11 +7,18 @@
 
 .typo {
     color: #979797;
-    margin-left: 16px;
+}
+
+.css-1wuw8dw-MuiBreadcrumbs-separator {
+    margin: 0 16px !important;
+}
+
+.css-1nb6h7e-MuiTypography-root {
+    font-family: 'Montserrat', sans-serif !important;
 }
 
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 321px) {
     .breadcrumps {
         font-size: 12px;
     }

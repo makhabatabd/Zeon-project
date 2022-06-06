@@ -8,13 +8,32 @@ import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer'
 import CloseIcon from '@mui/icons-material/Close';
+import Badge from '@mui/material/Badge';
+import { favoriteContext } from '../../context/favoriteContext';
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import { cartContext } from '../../context/CartContext';
+import Dialog from '@mui/material/Dialog';
+import DialogContent from '@mui/material/DialogContent';
+import Typography from '@mui/material/Typography';
 
 const Header = () => {
     const { getHeader, header } = useContext(headerContext)
     const [open, setOpen] = useState(false);
-    const [showInput, setShowInput]= useState(false)
+    const [showInput, setShowInput] = useState(false)
+    const { getFav, favoriteLength } = useContext(favoriteContext)
+    const { getCart, cartLength } = useContext(cartContext)
+    const [openDialog, setOpenDialog] = useState(false)
+    const [success, setSuccess] = useState(false)
+    const [name, setName] = useState("")
+    const [phone, setPhone] = useState("")
     useEffect(() => {
         getHeader()
+    }, [])
+    useEffect(() => {
+        getFav()
+    }, [])
+    useEffect(() => {
+        getCart()
     }, [])
     return (
         <div>
@@ -25,19 +44,19 @@ const Header = () => {
                             <Hidden xsDown smDown>
                             <div className='header-top'>
                                 <div className='header-top-left'>
-                                    <Link style={{textDecoration: 'none'}} to={'/about'}>
+                                    <Link style={{textDecoration: 'none', color: "#393939"}} to={'/about'}>
                                         <span>О нас</span>
                                         </Link>
-                                    <Link style={{textDecoration: 'none'}} to={'/collection'}>
+                                    <Link style={{textDecoration: 'none', color: "#393939"}} to={'/collection'}>
                                         <span>Коллекции</span>
                                     </Link>
-                                    <Link style={{textDecoration: 'none'}} to={'/news'}>
+                                    <Link style={{textDecoration: 'none', color: "#393939"}} to={'/news'}>
                                        <span>Новости</span>
                                     </Link>
                                 </div>
                                 <div className='header-top-right'>
-                                    <p><span>Тел:</span><a style={{ textDecoration: "none" }} href={item.number}>{item.number}</a></p>
-                                </div>
+                                    <p><span>Тел: </span><a style={{textDecoration: 'none', color: "#393939"}} href='tel:+996 500 123 456'>{item.number}</a></p>
+                                    </div>
                                 </div>
                             </Hidden>
                         </div>
@@ -59,29 +78,37 @@ const Header = () => {
                                     <span onClick={()=> setShowInput(v => !v)}>
                                     <SearchOutlinedIcon />
                                     </span>  
-                                    {showInput ? <input placeholder='Поиск' type="text" className='input-field' style={{width: "300px",height: "30px", border: "none", border: "1px solid #E0E0E0", position:"absolute", top:"10%", left: "10px", marginBottom:"10px"}} /> : null} 
+                                    {showInput ? <input placeholder='Поиск' type="text" className='input-field' style={{width: "300px",height: "30px", border: "none", border: "0.3px solid #E0E0E0", position:"absolute", top:"10%", left: "10px", marginBottom:"10px"}} /> : null} 
                                 </div>
                         <div className='search'>
                             <div className='input-icon'>
                                 <span className='icon'>
-                                    <img width="26px" height="26px" src={require('../../images/small-header.png')} alt="search" />
+                                    <img width="35px" height="35px" src={require('../../images/small-header.png')} alt="search" />
                                 </span>
-                                <input className='input-field' style={{background: "#F8F8F8", border: "1px solid #E0E0E0"}} placeholder='Поиск' type="text" />
+                                <input className='input-field' style={{background: "#F8F8F8", border: "0.3px solid #E0E0E0"}} placeholder='Поиск' type="text" />
                             </div>
                                 </div>
                             <Hidden xsDown smDown>
                                 <div className='header-extra-info'>
-                                    <div>
-                                        <img width="100%" src={require('../../images/heart-icon.png')} alt="the heart" />
-                                    </div>
-                                    <div>
-                                        <span className='header-selected'>Избранное</span>
-                                    </div>
-                                    <div>
-                                        <img width="100%" src={require('../../images/heart-icon.png')} alt="the heart" />
-                                    </div>
-                                    <div>
-                                        <span className='header-cart'>Корзина</span>
+                                        <div style={{display: "flex", alignItems:"center"}}>
+                                            <div>
+                                            {favoriteLength > 0 ? <Badge badgeContent=" " variant="dot" color='secondary' overlap="circular">
+                                                    <FavoriteBorderIcon sx={{ color: "#515151" }} />
+                                                </Badge> : <FavoriteBorderIcon sx={{ color: "#515151" }} />}
+                                            </div>
+                                            <div>
+                                             <Link style={{ textDecoration: 'none', color: "#393939" }} to={'/favorite'}>
+                                                <span className='header-selected'>Избранное</span> 
+                                            </Link>
+                                            </div>
+                                        </div>
+
+
+                                        <div style={{display: "flex", alignItems:"center"}}>
+                                            {cartLength > 0 ? <Badge badgeContent=" " variant="dot" color='secondary' overlap="circular"><img src={require('../../images/shopping-bag 1.png')} alt="cart" /></Badge>: <img src={require('../../images/shopping-bag 1.png')} alt="cart" /> }
+                                            <Link style={{ textDecoration: 'none', color: "#393939" }} to={'/cart'}>
+                                                <span className='header-cart'>Корзина</span>
+                                            </Link>
                                     </div>
                                 </div>
                             </Hidden>
@@ -108,11 +135,13 @@ const Header = () => {
                                 </div>
                                 <div className='burger-top'>
                                         <div className='burger-top-left'>
-                                            <Link style={{textDecoration: 'none'}} to={'/about'}>
+                                            <Link style={{textDecoration: 'none', color:"#393939"}} to={'/about'}>
                                             <p style={{fontWeight: "500", fontSize: "13px", margin: "0 0 20px 0"}}>О нас</p>
+                                        </Link>
+                                            <Link style={{textDecoration: 'none', color:"#393939"}} to={'/collection'}>
+                                            <p style={{ fontWeight: "500", fontSize: "13px", margin: "0 0 20px 0" }}>Коллекции</p>
                                             </Link>
-                                            <p style={{fontWeight: "500", fontSize: "13px", margin: "0 0 20px 0"}}>Коллекции</p>
-                                            <Link style={{textDecoration: 'none'}} to={'/news'}>
+                                            <Link style={{textDecoration: 'none', color:"#393939"}} to={'/news'}>
                                             <p style={{fontWeight: "500", fontSize: "13px", margin: "0 0 20px 0"}}>Новости</p>
                                             </Link>
                                         </div>
@@ -129,20 +158,68 @@ const Header = () => {
                                     </div>
                             </div>
                                     <div className='burger-bottom'>
-                                    <p style={{margin: "0px 0px 8px 0"}}>Свяжитесь с нами</p>
+                                <p style={{ margin: "0px 0px 8px 0" }}>Свяжитесь с нами</p>
                                     <div className='burger-top-right'>
-                                            <p style={{margin:"0 0 8px 0"}}>Тел:<a style={{ textDecoration: "none" }} href={item.number}>{item.number}</a></p>
+                                            <p style={{margin:"0 0 8px 0"}}>Тел: <a style={{ textDecoration: "none", color: "#393939" }} href='tel:+996 500 123 456'>{item.number}</a></p>
                                     </div>
                                     <div className='footer-icons'>
                                         <a style={{marginRight: "6px"}} href=""><img src={require('../../images/telegram (1).png')} alt="telegram" /></a>
                                         <a style={{marginRight: "6px"}}  href=""><img src={require('../../images/whatsapp.png')} alt="wa" /></a>
-                                        <a style={{marginRight: "6px"}}  href=""><img src={require('../../images/telephone.png')} alt="phone" /></a>
+                                    <span onClick={() => setOpenDialog(true)} style={{marginRight: "6px"}}  href=""><img src={require('../../images/telephone.png')} alt="phone" /></span>
                                     </div>
                                     </div>
                         </div>
                     </SwipeableDrawer>
                 </div>
             ))}
+             <Dialog
+            onClose={()=>setOpenDialog(false)}
+            open={openDialog}
+            >
+                <div className='call-dialog-inner'>
+                    <button className='delete'><CloseIcon onClick={() => {
+                            setOpenDialog(false)
+                            setOpen(false)
+                        }} /></button>
+                <DialogContent>
+                <h1 className='dialog-title'>Если у Вас остались вопросы</h1>
+                <p className='dialog-text'>Оставьте заявку и мы обязательно Вам перезвоним</p>
+                <Typography>
+                <input onChange={(e)=>setName(e.target.value)} className='input1 input' type="text" placeholder='Как к Вам обращаться?'/>
+                </Typography>
+                <Typography>
+                    <input onChange={(e)=>setPhone(e.target.value)} className='input2 input' type="number" placeholder='Номер телефона'/>
+                </Typography>
+                    </DialogContent>
+                {name && phone ? <button className='dialog-button-active' onClick={() => {
+                        setName("") && setPhone("")
+                        setSuccess(true)
+                        setOpenDialog(false) 
+                    }}> Заказать звонок </button>
+                        : <button disabled className='dialog-button'>
+                    Заказать звонок
+                </button>}
+            </div>
+            </Dialog>
+            <Dialog
+                PaperProps={{ sx: { width: "335px", height: "264px" }}}
+            onClose={()=>setSuccess(false)}
+            open={success}
+            >
+                <div className='dialog-success'>
+                <DialogContent>
+                <img width="64px" style={{margin:"10px auto 0"}} src={require('../../images/tick.png')}alt="tick" />
+                <h3 className='success-title'>Спасибо!</h3>
+                <p className='success-text'>Ваша заявка была принята ожидайте, скоро Вам перезвонят</p>
+                        <button className='success-button' onClick={() => {
+                            setSuccess(false)
+                            setOpen(false)
+                }}>
+                    Продолжить покупки
+                </button>
+                </DialogContent>
+            </div>
+        </Dialog>
             </div>
     );
 };

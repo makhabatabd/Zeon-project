@@ -1,5 +1,5 @@
 .header-top {
-    margin: 22px 0;
+    margin: 9px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,7 +21,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin: 21px 0;
+    margin: 9px 0;
 }
 
 .input-icon {
@@ -35,12 +35,13 @@
 }
 
 .icon {
-    padding: 10px 0 10px 630px;
+    padding: 5px 0 0px 625px;
 }
 
 .input-field {
     width: 662px;
     height: 44px;
+    border: 0.3px solid #F8F8F8;
 }
 
 .input-field::placeholder {
@@ -90,6 +91,10 @@
     display: none;
 }
 
+.css-i4bv87-MuiSvgIcon-root {
+    padding: 5px 6px 2px 6px !important
+}
+
 @media screen and (max-width: 600px) {
     .xs-search {
         display: block
@@ -111,4 +116,5 @@
     .header-bottom {
         margin: 10.5px 0;
     }
+
 }

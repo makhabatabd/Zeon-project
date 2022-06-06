@@ -9,13 +9,21 @@ const INIT_STATE = {
 
 const API = " http://localhost:8000/main-collection";
 
+let count = 0;
+if (window.innerWidth < 321) {
+  count = 4;
+} else {
+  count = 8;
+}
 const reducer = (state = INIT_STATE, action) => {
   switch (action.type) {
     case "GET_PRODUCTS":
       return {
         ...state,
         collection: action.payload.data,
-        collectionCount: Math.ceil(action.payload.headers["x-total-count"] / 8),
+        collectionCount: Math.ceil(
+          action.payload.headers["x-total-count"] / count
+        ),
       };
     default:
       return state;

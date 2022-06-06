@@ -8,8 +8,21 @@ const News = () => {
   const[currentPage, setCurrentPage] = useState(1)
   const [fetching, setFetching] = useState(true)
   const [totalCount, setTotalCount] = useState(0)
+  let limit = 0
+  let n = 0
   useEffect(() => {
-    if (fetching) {
+    if (window.innerWidth < 321) {
+      if (fetching) {
+      axios.get(`http://localhost:8000/news?_limit=4&_page=${currentPage}`)
+        .then(response => {
+           setPhotos(prev => [...prev, ...response.data])
+           setCurrentPage(prevState => prevState + 1)
+           setTotalCount(response.headers['x-total-count'])
+         })
+        .finally(()=>setFetching(false))
+    }
+    } else {
+      if (fetching) {
       axios.get(`http://localhost:8000/news?_limit=8&_page=${currentPage}`)
         .then(response => {
            setPhotos(prev => [...prev, ...response.data])
@@ -17,6 +30,7 @@ const News = () => {
            setTotalCount(response.headers['x-total-count'])
          })
         .finally(()=>setFetching(false))
+    }
     }
   }, [fetching])
 
@@ -26,9 +40,16 @@ const News = () => {
         document.removeEventListener("scroll", scrollHandler)
     }
   }, [fetching])
-  
-  const scrollHandler = (e) => {
-    if (e.target.documentElement.scrollHeight - (e.target.documentElement.scrollTop + window.innerHeight) < 100 && photos.length < totalCount) {
+
+  if (window.innerWidth < 321) {
+    limit = 0
+    n = 400
+  } else {
+    limit = 100
+    n = 0
+ }
+ const scrollHandler = (e) => {
+    if (e.target.documentElement.scrollHeight - n - (e.target.documentElement.scrollTop + window.innerHeight) < limit && photos.length < totalCount) {
       setFetching(true)
     }
   }

@@ -1,12 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
 import axios from 'axios';
 import "./Main.css"
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import Hits from '../Hits/Hits';
+import BrandNew from '../BrandNew/BrandNew';
+import { Link } from 'react-router-dom';
+import CloseIcon from '@mui/icons-material/Close';
+import Dialog from '@mui/material/Dialog';
+import DialogContent from '@mui/material/DialogContent';
+import Typography from '@mui/material/Typography';
+import Slider from '../Slider/Slider';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Table from '@mui/material/Table';
+import Paper from '@mui/material/Paper';
+
 
 const Main = () => {
     const [hits, setHits] = useState([])
@@ -22,6 +34,13 @@ const Main = () => {
     const [pageColl, setPageColl]=useState(1)
     const [totalColl, setTotalColl] = useState(0)
     const [pluses, setPluses] = useState([])
+    const [open, setOpen] = useState(false)
+    const [openDialog, setOpenDialog] = useState(false)
+    const [success, setSuccess] = useState(false)
+    const [name, setName] = useState("")
+    const [phone, setPhone] = useState("")
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+
     useEffect(() => {
     if (fetching) {
       axios.get(`http://localhost:8000/hits?_limit=8&_page=${currentPage}`)
@@ -83,167 +102,139 @@ const Main = () => {
             setFetchCollection(true)
         }
     }
-    const cardStyle = {
-        width: "286px",
-        height: "536px",
-        marginRight: "8px",
-        width: "24%", 
-        marginBottom: "8px", 
-        borderRadius: "none",
-        position:"relative"
-    }
-    const imageStyle = {
-        width: "286px", 
-        height: "437px"
-    };
 
-    const titleStyle = { 
-        fontSize: "14px",
-        lineHeight: "17px",
-        color: "#393939",
-        margin: "6px 0"
+    function topFunction() {
+    document.documentElement.scrollTop = 0;
     }
-    const priceStyle = { 
-        fontWeight: "500",
-        fontSize: "16px",
-        lineHeight: "20px",
-        color: "#393939",
-        margin: "0", 
-        color:"black"
+    
+    const toggle = () => {
+        open ? setOpen(false):setOpen(true)
     }
+    
+    useEffect(() => {
+        setScreenWidth(window.innerWidth)
+    }, [screenWidth])
 
-    const cardContent = {
-        padding: "6px 8px"
-    }
-
-    const sizeStyle = { 
-        fontSize: "13px",
-        lineHeight: "16px",
-        color: "#7C7C7C",
-        margin: "6px 0"
-    }
-
-    const smallCard = {
-        width: "286px",
-        height: "374px",
-        marginRight: "8px",
-        width: "24%",
-        position: "relative"
-    }
-
-    const smallCardPic = {
-        width: "286px",
-        height: "330px", 
-    }
     return (
         <div className='main'>
-            <div className='container'>
+            {
+                open ?
+                <div style={{ position: "fixed", top: "70%", left: "82%", m: 0, background: "transparent", zIndex: "3" }}>
+                    <span className='main-icons' href=""><img src={require('../../images/telegram (1).png')} alt="telegram" /></span>
+                    <span className='main-icons' href=""><img src={require('../../images/whatsapp.png')} alt="wa" /></span>
+                    <span className='main-icons' href=""><img onClick={()=>setOpenDialog(true)}  src={require('../../images/telephone.png')} alt="phone" /></span>
+                    </div> : null} 
+                <Slider/>
+                <div className='container'>
                 <h3 className='hit-main-title'>Хит продаж</h3>
-                <div style={{display: "flex", flexWrap: "wrap" ,}}>
+                <div className='swim-buttons'>
+                    <img onClick={()=>topFunction()} width="28px" height="28px" style={{ marginBottom: "20px" }} src={require('../../images/arrow-up.png')} alt="arrow up" />
+                    {open ? <img className='main-chat' width={19} onClick={() => toggle()} src={require('../../images/cancel.png')} alt="cancel" />  : <img className='main-chat' onClick={() => toggle()} width="28px" height="28px" src={require('../../images/chat (1) 1.png')} alt="chat" />}
+                </div>
+                <div className='not-table-cards'>
                     {hits.map((item) => (
-                    <Card style={cardStyle} key={item.id} square={true}>
-                        <CardActionArea>
-                        <img className='favorite' src={require('../../images/favorite.png')} alt="little heart" />
-                        <CardMedia style={imageStyle}
-                            component="img"
-                            height="140"
-                            image={item.image}
-                            alt="hits image"
-                        />
-                        <CardContent style={cardContent}>
-                        <Typography style={titleStyle} gutterBottom variant="h5" component="div">
-                            {item.title}
-                        </Typography>
-                        <Typography style={priceStyle}  className='hit-price' variant="body2" color="text.secondary">
-                            {item.price}
-                        </Typography>
-                        <Typography style={sizeStyle} variant="body2" color="text.secondary">
-                            Размер : {item.size}
-                        </Typography>
-                            <div className='colorful-circles'>
-                                <div className='circle-blue'></div>
-                                <div className='circle-green'></div>
-                                <div className='circle-marron'></div>
-                                <div className='circle-brown'></div>
-                                <div className='circle-purple'></div>
-                                <div className='circle-white'></div>
-                                <div className='circle-grey'></div>
-                                <div className='circle-pink'></div>
-                            </div>
-                        </CardContent>
-                        </CardActionArea>
-                    </Card>
-                    ))}
-                </div>
-                <div className='hit-button-div'>
+                        <Hits item={item} key={item.id} />))}
+                    </div>
+                    <div className='table-cards'>
+                     <TableContainer component={Paper}>
+                        <Table sx={{ minWidth: 262 }} aria-label="simple table">
+                            <TableHead>
+                                <TableRow>
+                                    {hits.map((item) => (
+                                        <TableCell key={item.id}>
+                                            <Hits item={item} key={item.id} />
+                                        </TableCell>))}
+                                </TableRow>
+                            </TableHead>
+                        </Table>
+                        </TableContainer> 
+                        </div>
+                {hits.length < totalCount ? <div className='hit-button-div'>
                     <button className='hit-button' onClick={clickHandler}>Еще</button>
-                </div>
+                </div>: null}
             </div>
-             <div className='container'>
+             <div>
+            <div className='container'>
                 <h3 className='hit-main-title'>Новинки</h3>
-                <div style={{display: "flex", flexWrap: "wrap" ,}}>
+                    <div className='not-table-cards'>
                     {brandnew.map((item) => (
-                    <Card style={cardStyle} key={item.id} square={true}>
-                        <CardActionArea>
-                        <img className='favorite' src={require('../../images/favorite.png')} alt="little heart" />
-                        <CardMedia style={imageStyle}
-                            component="img"
-                            height="140"
-                            image={item.image}
-                            alt="hits image"
-                        />
-                        <CardContent style={cardContent}>
-                        <Typography style={titleStyle} gutterBottom variant="h5" component="div">
-                            {item.title}
-                        </Typography>
-                        <Typography style={priceStyle}  className='hit-price' variant="body2" color="text.secondary">
-                            {item.price}
-                        </Typography>
-                        <Typography style={sizeStyle} variant="body2" color="text.secondary">
-                            Размер : {item.size}
-                        </Typography>
-                            <div className='colorful-circles'>
-                                <div className='circle-blue'></div>
-                                <div className='circle-green'></div>
-                                <div className='circle-marron'></div>
-                                <div className='circle-brown'></div>
-                                <div className='circle-purple'></div>
-                                <div className='circle-white'></div>
-                                <div className='circle-grey'></div>
-                                <div className='circle-pink'></div>
-                            </div>
-                        </CardContent>
-                        </CardActionArea>
-                    </Card>
-                    ))}
-                </div>
-                <div className='hit-button-div'>
+                        <BrandNew item={item} key={item.id} />))}
+                    </div>
+                    <div className='table-cards'>
+                        <TableContainer component={Paper}>
+                        <Table sx={{ minWidth: 262 }} aria-label="simple table">
+                            <TableHead>
+                                <TableRow>
+                                    {brandnew.map((item) => (
+                                        <TableCell key={item.id}>
+                                            <BrandNew item={item} key={item.id}/>
+                                        </TableCell>))}
+                                </TableRow>
+                            </TableHead>
+                        </Table>
+                        </TableContainer>
+                    </div>
+                    {brandnew.length < totalNew ?  <div className='hit-button-div'>
                     <button className='hit-button' onClick={clickNew}>Еще</button>
-                </div>
+                    </div>: null}
             </div>
+            
+        </div>
             <div className='container'>
                 <h3 className='hit-main-title'>Хит продаж</h3>
-                <div style={{display: "flex", flexWrap: "wrap"}}>
+                <div className='card-div'>
+                    <div className='not-table-cards'>
                     {collection.map((item) => (
-                        <Card style={smallCard} key={item.id} square={true}>
-                        <CardMedia style={smallCardPic}
-                            component="img"
-                            height="140"
-                            image={item.img}
-                            alt="image"
-                        />
-                            <div className='collection-words'>
-                                <p>{item.text}</p>
-                            </div>
-                            <button className='collection-bottom'>Смотреть все
-                                <ArrowForwardIosIcon sx={{ fill: '#fff'}} />
-                            </button>
-                    </Card>
-                    ))}
+                        <Card sx={{width: "280px",height: "374px",marginRight: "8px",position: "relative"}} key={item.id} square={true}>
+                            <CardMedia sx={{ width: "286px",height: "330px", }}
+                                component="img"
+                                height="140"
+                                image={item.img}
+                                alt="image"
+                                />
+                                <div className='collection-words'>
+                                    <p>{item.text}</p>
+                                </div>
+                                <Link style={{textDecoration: 'none'}} to={'/summer'}>
+                                    <button className='collection-bottom'>Смотреть все
+                                        <ArrowForwardIosIcon sx={{ fill: '#fff'}} />
+                                    </button>
+                                </Link>
+                            </Card>))}
+                    </div>
+                    <div className='table-cards'>
+                    <TableContainer component={Paper}>
+                        <Table sx={{ minWidth: 262 }} aria-label="simple table">
+                            <TableHead>
+                                <TableRow>
+                                    {collection.map((item) => (
+                                        <TableCell key={item.id}>
+                                            <Card sx={{width: "286px",height: "374px",position: "relative"}} square={true}>
+                                                <CardMedia sx={{ width: "286px",height: "330px", }}
+                                                component="img"
+                                                height="140"
+                                                image={item.img}
+                                                alt="image"
+                                            />
+                                                <div className='collection-words'>
+                                                    <p>{item.text}</p>
+                                                </div>
+                                                <Link style={{textDecoration: 'none'}} to={'/summer'}>
+                                                    <button className='collection-bottom'>Смотреть все
+                                                        <ArrowForwardIosIcon sx={{ fill: '#fff'}} />
+                                                    </button>
+                                                </Link>
+                                        </Card>
+                                        </TableCell>))}
+                                </TableRow>
+                            </TableHead>
+                        </Table>
+                        </TableContainer>
+                        </div>
                 </div>
-                <div className='hit-button-div'>
+                {collection.length < totalColl ? <div className='hit-button-div'>
                     <button className='hit-button' onClick={clickColl}>Еще</button>
-                </div>
+                </div>: null}
             </div>
             <div className='advantages'>
                 <div className='container'>
@@ -259,6 +250,58 @@ const Main = () => {
                     </div>
                 </div>
             </div>
+             <Dialog
+            onClose={()=>setOpenDialog(false)}
+            open={openDialog}
+            >
+                <div className='call-dialog-inner'>
+                    <button className='delete'>
+                    <CloseIcon onClick={() => {
+                        setOpenDialog(false)
+                        setOpen(false)
+                        }} />
+                        </button>
+                <DialogContent>
+                <h1 className='dialog-title'>Если у Вас остались вопросы</h1>
+                <Typography>
+                    <p className='dialog-text'>Оставьте заявку и мы обязательно Вам перезвоним</p>
+                </Typography>
+                <Typography>
+                <input  onChange={(e)=>setName(e.target.value)} className='input1 input' type="text" placeholder='Как к Вам обращаться?'/>
+                </Typography>
+                <Typography>
+                    <input onChange={(e)=>setPhone(e.target.value)} className='input2 input' type="number" placeholder='Номер телефона'/>
+                </Typography>
+                    </DialogContent>
+                    {name && phone ? <button className='dialog-button-active' onClick={() => {
+                        setName("") && setPhone("")
+                        setSuccess(true)
+                        setOpenDialog(false) 
+                    }}> Заказать звонок </button>
+                        : <button disabled className='dialog-button'>
+                    Заказать звонок
+                </button>}
+            </div>
+            </Dialog>
+            <Dialog
+                PaperProps={{ sx: { width: "335px", height: "264px" }}}
+            onClose={()=>setSuccess(false)}
+            open={success}
+            >
+                <div className='dialog-success'>
+                <DialogContent>
+                <img width="64px" style={{margin:"10px auto 0"}} src={require('../../images/tick.png')}alt="tick" />
+                <h3 className='success-title'>Спасибо!</h3>
+                <p className='success-text'>Ваша заявка была принята ожидайте, скоро Вам перезвонят</p>
+                        <button className='success-button' onClick={() => {
+                            setSuccess(false)
+                            setOpen(false)
+                }}>
+                    Продолжить покупки
+                </button>
+                </DialogContent>
+            </div>
+        </Dialog>
         </div>
     );
 };

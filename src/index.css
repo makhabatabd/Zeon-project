@@ -3,7 +3,6 @@
   font-size: 17px;
   font-weight: 400;
   font-style: normal;
-  color: #393939;
 }
 
 body {
@@ -23,4 +22,8 @@ body {
   padding: 0 99px;
   margin: 0 auto;
   max-width: 1172px;
+}
+
+a {
+  cursor: pointer;
 }

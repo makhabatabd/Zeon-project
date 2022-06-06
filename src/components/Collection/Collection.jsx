@@ -7,12 +7,15 @@ import { collectionContext } from '../../context/Collection';
 import Pagination from '@mui/material/Pagination';
 import { makeStyles } from "@material-ui/styles";
 import { Link } from 'react-router-dom';
+import "./Collection.css"
 
 const useStyles = makeStyles(() => ({
   ul: {
     "& .MuiPaginationItem-root": {
         color: "#979797",
-        backgroundColor: "white"
+        backgroundColor: "white", 
+        border: "none", 
+        borderRadius:"0"
     },
   },
 }));
@@ -23,45 +26,53 @@ const Collection = () => {
     const [searchParams, setSearchParams] = useSearchParams();
     const [page, setPage] = useState(+searchParams.get("_page") || 1);
     const classes = useStyles();
-    
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+
+
     useEffect(() => {
-    setSearchParams({
-        _limit: 8,
-        _page: page,
+        setScreenWidth(window.innerWidth)
+    }, [window.innerWidth])
+
+     useEffect(() => {
+        if (screenWidth < 321) {
+            setSearchParams({
+            _limit: 4,
+            _page: page,
+            })
+        } else {
+            setSearchParams({
+            _limit: 8,
+            _page: page,
     });
+    }
     }, []);
 
     useEffect(() => {
     getCollection();
   }, [searchParams]);
 
-    useEffect(() => {
-    setSearchParams({
-        _limit: 8,
-      _page: page,
+       useEffect(() => {
+        if (screenWidth < 321) {
+            setSearchParams({
+            _limit: 4,
+            _page: page,
+            })
+            } else {
+            setSearchParams({
+            _limit: 8,
+            _page: page,
     });
+    }
     }, [page]);
-
-    const smallCard = {
-        width: "286px",
-        height: "374px",
-        marginRight: "8px",
-        marginBottom: "8px",
-        width: "24%",
-        position: "relative"
-    }
-
-    const smallCardPic = {
-        width: "286px",
-        height: "330px", 
-    }
     return (
+        <div style={{backgroundColor: "#ECECEC"}}>
             <div className='container'>
-                <h3 className='hit-main-title'>Хит продаж</h3>
-            <div style={{ display: "flex", flexWrap: "wrap" }}>
+                <h3 className='collection-main-title'>Коллекции</h3>
+            <div className='collection-cards'>
                     {collection.map((item) => (
-                        <Card style={smallCard} key={item.id} square={true}>
-                        <CardMedia style={smallCardPic}
+                        <div className='collection-card-div'>
+                        <Card sx={{width: "285px",height: "374px",marginRight: "8px",position: "relative", marginBottom: "8px"}} key={item.id} square={true}>
+                        <CardMedia sx={{ width: "286px",height: "330px" }}
                             component="img"
                             height="140"
                             image={item.img}
@@ -76,16 +87,17 @@ const Collection = () => {
                                 </button>
                             </Link>
                     </Card>
+                    </div>
                     ))}
             </div>
-                <div style={{display:"flex", justifyContent: "flex-end", margin: "16px 25px 49px 0"}}>
+                <div className='collection-pagination'>
                     <Pagination
                     variant="outlined" classes={{ ul: classes.ul }} shape="rounded"
-                    color="primary"
                     count={collectionCount}
                     page={+page}
                     onChange={(event, pageVal) => setPage(pageVal)}
                     />
+                </div>
                 </div>
             </div>
     );

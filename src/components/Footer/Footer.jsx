@@ -53,15 +53,15 @@ const Footer = () => {
                             <h5>Мы в социальных сетях</h5>
                             <div className='contacts'>
                                 <img src={require('../../images/insta.png')} alt="the phone call" />
-                                <p>{item.insta}</p>
+                               <p><a target="_blank" href="https://www.instagram.com/">{item.insta}</a></p>
                             </div>
                             <div className='contacts'>
                                 <img src={require('../../images/telegram.png')} alt="the phone call" />
-                                <p>{item.tel}</p>
+                                <p><a target="_blank" href="https://web.telegram.org/">{item.tel}</a></p>
                             </div>
                             <div className='contacts'>
                                 <img src={require('../../images/phonecall.png')} alt="the phone call" />
-                                <p>{item.wa}</p>
+                                <p><a target="_blank" href="https://web.whatsapp.com/">{item.wa}</a></p>
                             </div>
                         </div>
                     </div>

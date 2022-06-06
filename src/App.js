@@ -8,21 +8,28 @@ import News from "./components/News/News";
 import Offerta from "./components/Offerta/Offerta";
 import Footer from "./components/Footer/Footer";
 import Help from "./components/Help/Help";
-import Slider from "./components/Slider/Slider";
 import Main from "./components/Main/Main";
 import Collection from "./components/Collection/Collection";
 import CollectionContextProvider from "./context/Collection";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
 import SummerContextProvider from "./context/SummerCollection";
 import NewContextProvider from "./context/Brandnew";
 import Summer from "./components/Summer/Summer";
-
 import New from "./components/New/New";
+import Favorite from "./components/Favorite/Favorite";
+import FavoriteContextProvider from "./context/favoriteContext";
+import Details from "./components/Details/Details";
+import HitDetails from "./components/HitDetails/HitDetails";
+import NewDetails from "./components/NewDetails/NewDetails";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import Cart from "./components/Cart/Cart";
+import CartContextProvider from "./context/CartContext";
+import Order from "./components/Order/Order";
+import "react-phone-number-input/style.css";
 
 const theme = createTheme({
   palette: {
-    primary: {
-      main: "#1D1D1B",
+    secondary: {
+      main: "#E5271B",
     },
   },
 });
@@ -34,22 +41,35 @@ const App = () => {
         <CollectionContextProvider>
           <SummerContextProvider>
             <NewContextProvider>
-              <Router>
-                <Header />
-                <BasicBreadCrumbs />
-                <Routes>
-                  <Route path="/" element={<Main />} exact />
-                  <Route path="/collection" element={<Collection />} exact />
-                  <Route path="/summer" element={<Summer />} exact />
-                  <Route path="/about" element={<About />} exact />
-                  <Route path="/new" element={<New />} exact />
-                  <Route path="/news" element={<News />} exact />
-                  <Route path="/offerta" element={<Offerta />} exact />
-                  <Route path="/help" element={<Help />} exact />
-                  <Route path="/slider" element={<Slider />} exact />
-                </Routes>
-                <Footer />
-              </Router>
+              <FavoriteContextProvider>
+                <CartContextProvider>
+                  <Router>
+                    <Header />
+                    <BasicBreadCrumbs />
+                    <Routes>
+                      <Route path="/details/:id" element={<Details />} />
+                      <Route path="/order" element={<Order />} />
+                      <Route path="/hitdetails/:id" element={<HitDetails />} />
+                      <Route path="/newdetails/:id" element={<NewDetails />} />
+                      <Route path="/" element={<Main />} exact />
+                      <Route path="/favorite" element={<Favorite />} exact />
+                      <Route path="/cart" element={<Cart />} exact />
+                      <Route
+                        path="/collection"
+                        element={<Collection />}
+                        exact
+                      />
+                      <Route path="/summer" element={<Summer />} exact />
+                      <Route path="/about" element={<About />} exact />
+                      <Route path="/new" element={<New />} exact />
+                      <Route path="/news" element={<News />} exact />
+                      <Route path="/offerta" element={<Offerta />} exact />
+                      <Route path="/help" element={<Help />} exact />
+                    </Routes>
+                    <Footer />
+                  </Router>
+                </CartContextProvider>
+              </FavoriteContextProvider>
             </NewContextProvider>
           </SummerContextProvider>
         </CollectionContextProvider>
