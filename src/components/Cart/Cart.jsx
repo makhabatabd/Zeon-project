@@ -18,6 +18,8 @@ const Cart = () => {
     const [extraProducts, setExtraProducts] = useState([])
     const [info, setInfo] = useState(false)
     const [button, setButton] = useState(false)
+    const total = cart.totalPrice - cart.cartDiscount
+    const disc = cart.cartDiscount * cart.totalCount
   useEffect(() => {
     getCart();
   }, []);
@@ -114,12 +116,12 @@ const Cart = () => {
                                 </div>
                                 <div className='payment-info'> 
                                     <span>Скидка :</span>
-                                    <p>{cart.cartDiscount.toLocaleString().replace(',', ' ')} рублей</p>
+                                    <p>{disc.toLocaleString().replace(',', ' ')} рублей</p>
                                 </div>
                                 <hr className='hr'/>
                                 <div className='payment-info'>
                                 <span>Итого к оплате</span>
-                                <p>{cart.totalPrice.toLocaleString().replace(',', ' ') - cart.cartDiscount.toLocaleString().replace(',', ' ')} рублей</p>
+                                <p>{total.toLocaleString().replace(',', ' ')} рублей</p>
                                     </div>
                                     {button ?  <button className='mini-info-btn' onClick={() => {
                                     setInfo(false)
@@ -133,7 +135,7 @@ const Cart = () => {
                                 }} className='payment-button'>Оформить заказ</button>
                             </div>: <div className='payment-total-info'>
                                 <span>Итого к оплате</span>
-                                <p>{cart.totalPrice.toLocaleString().replace(',', ' ') - cart.cartDiscount.toLocaleString().replace(',', ' ')} рублей</p>
+                                <p>{total.toLocaleString().replace(',', ' ')} рублей</p>
                                 {button ?  <button className='mini-info-btn' onClick={() => {
                                     setInfo(false)
                                     setButton(false)
@@ -162,12 +164,12 @@ const Cart = () => {
                                 </div>
                                 <div className='payment-info'> 
                                     <span>Скидка :</span>
-                                    <p>{cart.cartDiscount.toLocaleString().replace(',', ' ')} рублей</p>
+                                    <p>{disc.toLocaleString().replace(',', ' ')} рублей</p>
                                 </div>
                                 <hr style={{ width: "387px", border: "dashed 1px #BFBFBF", margin:"12px 0 12px 0" }} />
                                 <div className='payment-info'>
                                 <span>Итого к оплате</span>
-                                <p>{cart.totalPrice.toLocaleString().replace(',', ' ') - cart.cartDiscount.toLocaleString().replace(',', ' ')} рублей</p>
+                                <p>{total.toLocaleString().replace(',', ' ')} рублей</p>
                                 </div>
                                 <button onClick={() => {
                                     setOpen(true)

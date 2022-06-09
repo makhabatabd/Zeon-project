@@ -5,6 +5,13 @@ const INIT_STATE = {
   data: [],
 };
 
+let count = 0;
+if (window.innerWidth < 321) {
+  count = 4;
+} else {
+  count = 12;
+}
+
 export const allContext = React.createContext();
 const API = "http://localhost:8000/";
 
@@ -22,13 +29,15 @@ const reducer = (state = INIT_STATE, action) => {
 
 const AllContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
-  
+
   async function getAllProducts() {
     const summer = `${API}summer`;
     const hits = `${API}hits`;
+    const brandNew = `${API}brandnew`;
     const requestOne = await axios.get(summer).then((json) => json.data);
     const requestTwo = await axios.get(hits).then((json) => json.data);
-    let all = await axios.all([requestOne, requestTwo]);
+    const requestThree = await axios.get(brandNew).then((json) => json.data);
+    let all = await axios.all([requestOne, requestTwo, requestThree]);
     dispatch({
       type: "GET_ALL_PRODUCTS",
       payload: all,

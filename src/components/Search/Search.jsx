@@ -4,6 +4,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { allContext } from '../../context/AllContext';
 import SearchIcon from '@mui/icons-material/Search';
 import "./Search.css"
+import { useRef } from 'react';
+import { red } from '@mui/material/colors';
 
 
 const Search = () => {
@@ -14,9 +16,12 @@ const Search = () => {
     const allData = data.reduce((acc, val) => acc.concat(val), [])
     const [filteredData, setFilteredData] = useState([])
     const [searchValue, setSearchValue] = useState("")
+    const [show, setShow] = useState(false)
     const navigate = useNavigate()
 
+    const ref = useRef()
     const handleFilter = (event) => {
+        setShow(true)
         const searchWord = event.target.value;
         setSearchValue(searchWord);
         const newFilter = allData.filter((value) => {
@@ -35,25 +40,35 @@ const Search = () => {
         setSearchValue("");
     };
     
-    const handleNavigate = () => {
+    const handleNavigate = (e) => {
+        e.preventDefault()
         navigate(`/searchpage/${searchValue}`)
         clearInput()
+        ref.current.value = ""
+        setShow(false)
     }
+
+    const inputHandler = () => {
+        if (searchValue !== "") {
+            setShow(true)
+        }
+    }
+
     return (
         <div>
             <div className='search'>
                 <div className='search-inputs'>
-                    <input value={searchValue} onChange={handleFilter} placeholder='Поиск' type="text" />
+                    <input onBlur={() => setTimeout(() => setShow(false), 300)} onClick={() => inputHandler()} ref={ref} onChange={handleFilter} placeholder='Поиск' type="text" />
                     <div className='search-icon'>
-                        <SearchIcon onClick={()=>handleNavigate()}/>
+                        <SearchIcon onClick={handleNavigate}/>
                     </div>
                 </div>
             </div>
-            {filteredData.length != 0 && (
+            {filteredData.length != 0 && show && (
                 <div className='data-result-outter'>
                 <div className="data-result">
                     {filteredData.map((value, key) => (
-                        <Link className='data-item' to={`/searchpage/${value.title}`} >
+                        <Link onClick={()=>ref.current.value =""} className='data-item' to={`/searchpage/${value.title}`} >
                             {value.title}
                         </Link>
                     ))}

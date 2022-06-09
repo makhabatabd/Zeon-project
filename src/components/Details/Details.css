@@ -75,6 +75,24 @@
 
 .details-price {
     font-weight: 400;
+    display: inline-block;
+    font-size: 24px;
+    margin: 0 0 18px 0;
+}
+
+.details-price-discount {
+    display: inline-block;
+    color: #979797;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0 0 18px 0;
+    text-decoration: line-through;
+    margin-left: 6px;
+}
+
+.deatils-discount {
+    font-weight: 400;
+    display: inline-block;
     font-size: 24px;
     margin: 0 0 18px 0;
 }

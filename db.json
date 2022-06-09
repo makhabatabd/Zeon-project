@@ -300,8 +300,9 @@
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
-      "discount": 10, 
-      "color": "#73A39D"
+      "discount": 10,
+      "color": "#73A39D",
+      "type": "hit"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979364663668117514/unknown.png",
@@ -316,8 +317,9 @@
       "artikul": "Платье PL984/dakota",
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
-      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png", 
-      "color": "#73A39D"
+      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
+      "color": "#73A39D",
+      "type": "hit"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979365676814860288/unknown.png",
@@ -332,8 +334,9 @@
       "artikul": "Платье PL984/dakota",
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
-      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png", 
-      "color": "#73A39D"
+      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
+      "color": "#73A39D",
+      "type": "hit"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979365807970734130/unknown.png",
@@ -349,8 +352,9 @@
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
-      "discount": 20, 
-      "color": "#73A39D"
+      "discount": 20,
+      "color": "#73A39D",
+      "type": "hit"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979601812472598619/979602619561570324/unknown.png",
@@ -365,8 +369,9 @@
       "artikul": "Платье PL984/dakota",
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
-      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png", 
-      "color": "#73A39D"
+      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
+      "color": "#73A39D",
+      "type": "hit"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979366071993761842/unknown.png",
@@ -382,8 +387,9 @@
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
-      "discount": 10, 
-      "color": "#73A39D"
+      "discount": 10,
+      "color": "#73A39D",
+      "type": "hit"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979366160699109467/unknown.png",
@@ -398,8 +404,9 @@
       "artikul": "Платье PL984/dakota",
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
-      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png", 
-      "color": "#73A39D"
+      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
+      "color": "#73A39D",
+      "type": "hit"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979367807294795816/unknown.png",
@@ -415,7 +422,8 @@
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "hit"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979364513835020328/unknown.png",
@@ -431,7 +439,8 @@
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "hit"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979601812472598619/979602619561570324/unknown.png",
@@ -448,7 +457,8 @@
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
       "discount": 50,
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "hit"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979365676814860288/unknown.png",
@@ -464,7 +474,8 @@
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "hit"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979365807970734130/unknown.png",
@@ -481,7 +492,8 @@
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
       "discount": 60,
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "hit"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979367807294795816/unknown.png",
@@ -497,7 +509,8 @@
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "hit"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979364513835020328/unknown.png",
@@ -514,7 +527,8 @@
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
       "discount": 10,
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "hit"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979601812472598619/979602619561570324/unknown.png",
@@ -530,7 +544,8 @@
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "hit"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979367807294795816/unknown.png",
@@ -546,7 +561,8 @@
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "hit"
     }
   ],
   "brandnew": [
@@ -565,7 +581,8 @@
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
       "discount": 10,
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "new"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979367527148814336/unknown.png",
@@ -581,7 +598,8 @@
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "new"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979367657570701322/unknown.png",
@@ -597,7 +615,8 @@
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "new"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979367807294795816/unknown.png",
@@ -613,7 +632,8 @@
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "new"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979367348249186404/unknown.png",
@@ -629,7 +649,8 @@
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "new"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979367527148814336/unknown.png",
@@ -646,7 +667,8 @@
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
       "discount": 10,
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "new"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979367657570701322/unknown.png",
@@ -663,7 +685,8 @@
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
       "discount": 20,
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "new"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979367807294795816/unknown.png",
@@ -679,7 +702,8 @@
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "new"
     }
   ],
   "collection": [
@@ -888,7 +912,8 @@
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
       "discount": 20,
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "summer"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979601812472598619/980361408480948254/unknown.png",
@@ -904,7 +929,8 @@
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "summer"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
@@ -920,7 +946,8 @@
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "summer"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979601812472598619/980361640304332820/unknown.png",
@@ -937,7 +964,8 @@
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
       "discount": 10,
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "summer"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979601812472598619/980360810209636362/unknown.png",
@@ -953,7 +981,8 @@
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "summer"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979601812472598619/980361408480948254/unknown.png",
@@ -970,7 +999,8 @@
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
       "discount": 20,
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "summer"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
@@ -986,7 +1016,8 @@
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "summer"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979601812472598619/980361640304332820/unknown.png",
@@ -1003,7 +1034,8 @@
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
       "discount": 10,
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "summer"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979601812472598619/980360810209636362/unknown.png",
@@ -1019,7 +1051,8 @@
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "summer"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979601812472598619/980361408480948254/unknown.png",
@@ -1035,7 +1068,8 @@
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "summer"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
@@ -1051,7 +1085,8 @@
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "summer"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979601812472598619/980361640304332820/unknown.png",
@@ -1068,7 +1103,8 @@
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
       "discount": 50,
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "summer"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979601812472598619/980360810209636362/unknown.png",
@@ -1084,7 +1120,8 @@
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "summer"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979601812472598619/980361408480948254/unknown.png",
@@ -1101,7 +1138,8 @@
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
       "discount": 10,
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "summer"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
@@ -1117,7 +1155,8 @@
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "summer"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979601812472598619/980361640304332820/unknown.png",
@@ -1133,7 +1172,8 @@
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "summer"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979601812472598619/980360810209636362/unknown.png",
@@ -1150,7 +1190,8 @@
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
       "discount": 10,
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "summer"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979601812472598619/980361408480948254/unknown.png",
@@ -1166,7 +1207,8 @@
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "summer"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
@@ -1182,7 +1224,8 @@
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "summer"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979601812472598619/980361640304332820/unknown.png",
@@ -1199,7 +1242,8 @@
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
       "discount": 10,
-      "color": "#73A39D"
+      "color": "#73A39D",
+      "type": "summer"
     }
   ],
   "new": [
@@ -1282,166 +1326,22 @@
       "id": 6
     },
     {
-      "name": "SAFSF",
-      "surname": "hadgjSGD",
-      "email": "22",
-      "country": "Kyrgyzstan",
-      "city": "Bishkek",
-      "phone": "",
+      "name": "kjnsdkcsnd",
+      "surname": "efnweofnwe",
+      "email": "wfwneew@gmail.com",
+      "country": "ergwrtgwrgw",
+      "city": "ergwgwergewgw",
+      "phone": "+996234256775432",
       "id": 7
     },
     {
-      "name": "ewdwdefwf",
-      "surname": "wefwefwfwf",
-      "email": "wefwefwf",
-      "country": "ferfrfweferf",
-      "city": "efwrferferfwfrewrf",
-      "phone": "+99621313123213",
+      "name": "egwegwg",
+      "surname": "wegwgewegw",
+      "email": "wegweg@gmail.com",
+      "country": "egresrthdyjuiytgrf",
+      "city": "eratyuityoutytrew",
+      "phone": "+99621435678",
       "id": 8
-    },
-    {
-      "name": "ewfwfe",
-      "surname": "wewfwefwef",
-      "email": "wefwfeewfwef",
-      "country": "ergewrgwregwerg",
-      "city": "ergwrgewwewgwgwer",
-      "phone": "+996234133214124",
-      "id": 9
-    },
-    {
-      "name": "efwefwfw",
-      "surname": "wefewfwfwf",
-      "email": "wefwefwefwef",
-      "country": "wfwafwerfdaefwefa",
-      "city": "rfewrgrerfgretgefafwrthtgsafeg",
-      "phone": "+9963454242424234",
-      "id": 10
-    },
-    {
-      "name": "kmlkm",
-      "surname": "kmlkmlkm",
-      "email": "kmlkmlkml",
-      "country": " nklm;;lk",
-      "city": "knmlkmlkmkl",
-      "phone": "",
-      "id": 11
-    },
-    {
-      "name": "wefwfwfe",
-      "surname": "wefwfwfe",
-      "email": "wefwfwfwef",
-      "country": "egewrgwerg",
-      "city": "erwqfewfqefrwerw",
-      "phone": "+996324214131313123123",
-      "id": 12
-    },
-    {
-      "name": "efwfwfwef",
-      "surname": "wefwefwefew",
-      "email": "wefwefwfwf",
-      "country": "dgrgwrgertgertg",
-      "city": "trgrtgrtgerg",
-      "phone": "+996324234234243",
-      "id": 13
-    },
-    {
-      "name": "dsfafdfsaf",
-      "surname": "efawefeqafr",
-      "email": "efqwefwqef@gmail.com",
-      "country": "sgaegrwgggsrgr",
-      "city": "egwergwegrerwgwerge",
-      "phone": "+99632412124234",
-      "id": 14
-    },
-    {
-      "name": "egraegqerg",
-      "surname": "egqegwerrge",
-      "email": "ergewrgerg@gmail.com",
-      "country": "ereqewfqwefwqef",
-      "city": "wqefqwefqwefqwef",
-      "phone": "+996987987080",
-      "id": 15
-    },
-    {
-      "name": "dvsdvsv",
-      "surname": "sdvsvdsv",
-      "email": "sdvsdvsvsv@gmail.com",
-      "country": "ergwrgerrwegr",
-      "city": "rgwegrwergewrg",
-      "phone": "+996234122132414",
-      "id": 16
-    },
-    {
-      "name": "efwwfew",
-      "surname": "afewqfqwfe",
-      "email": "efewqefwaef@gmail.com",
-      "country": "fvgwevvdfvwer",
-      "city": "ervwervwerevwe",
-      "phone": "+9962132132141234",
-      "id": 17
-    },
-    {
-      "name": "ewqfweqewfw",
-      "surname": "efqwefqfwqffwqef",
-      "email": "fqewfqefwqfe@gmail.com",
-      "country": "ergrgrwvrtrsg",
-      "city": "ergwrgergwegewgr",
-      "phone": "+996234156432",
-      "id": 18
-    },
-    {
-      "name": "wd2e23e",
-      "surname": "23e2e323e23e",
-      "email": "23e23e23e23e@gmail.com",
-      "country": "erfwefwerf",
-      "city": "fweqefqewfqwefef",
-      "phone": "+996231313123",
-      "id": 19
-    },
-    {
-      "name": "jbjkhbjkbjb",
-      "surname": "jbkjbjkbkj",
-      "email": "hvhjvbj@gmail.com",
-      "country": "fqefwerfwegwe",
-      "city": "ewrfewgrergegr",
-      "phone": "+99632456234234",
-      "id": 20
-    },
-    {
-      "name": "fewefwef",
-      "surname": "wefwfwef",
-      "email": "wefwefwef@gmail.com",
-      "country": "ergwethrgweafwdqes",
-      "city": "ewrtehrgwfewqrgty",
-      "phone": "+99623414556432",
-      "id": 21
-    },
-    {
-      "name": "fasdasfaf",
-      "surname": "",
-      "email": "",
-      "country": "",
-      "city": "",
-      "phone": "",
-      "id": 22
-    },
-    {
-      "name": "wefwewfwfew",
-      "surname": "wefwefwfew",
-      "email": "wefwefwef",
-      "country": "",
-      "city": "",
-      "phone": "",
-      "id": 23
-    },
-    {
-      "name": "werwwr",
-      "surname": "werwerewerw",
-      "email": "werwerwrwre@gmail.com",
-      "country": "ergwergtwerg",
-      "city": "ergewgewgerw",
-      "phone": "+9962345643245",
-      "id": 24
     }
   ],
   "colors": [

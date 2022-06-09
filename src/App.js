@@ -59,7 +59,6 @@ const App = () => {
                             path="/searchpage/:searchValue"
                             element={<SearchPage />}
                           />
-                          <Route path="/search" element={<Search />} />
                           <Route path="/details/:id" element={<Details />} />
                           <Route path="/order" element={<Order />} />
                           <Route

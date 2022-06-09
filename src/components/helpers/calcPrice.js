@@ -20,12 +20,14 @@ export function calcDiscount(products) {
     return cartDiscount;
   } else {
     products.forEach((item) => {
-      if (item.discount) {
-        cartDiscount += Math.ceil(
-          item.price - (item.price * item.discount) / 100
-        );
-      } else {
-        return (cartDiscount = 0);
+      {
+        item.item.discount
+          ? (cartDiscount +=
+              (item.item.price -
+                (item.item.price -
+                  (item.item.price * item.item.discount) / 100)) *
+              5)
+          : (cartDiscount = 0);
       }
     });
     return cartDiscount;

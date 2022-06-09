@@ -15,7 +15,7 @@
 .summer-pagination {
     display: flex;
     justify-content: flex-end;
-    margin: 16px 25px 49px 0;
+    padding: 16px 25px 49px 0;
 }
 
 @media screen and (max-width: 321px) {
@@ -34,6 +34,6 @@
     .summer-pagination {
         display: flex;
         justify-content: flex-end;
-        margin: 16px 11px 32px 0;
+        padding: 16px 11px 32px 0;
     }
 }

@@ -47,16 +47,19 @@ const CartContextProvider = ({ children }) => {
     });
   }
   function addProductToCart(product) {
+    console.log("product", product);
     let cart = JSON.parse(localStorage.getItem("cart"));
     if (!cart) {
       cart = {
         products: [],
         totalPrice: 0,
+        cartDiscount: 0,
       };
     }
     let newProduct = {
       item: product,
       subPrice: product.price,
+      discount: product.discount,
       count: 1,
     };
     let isProductInCart = cart.products.some(
@@ -82,6 +85,7 @@ const CartContextProvider = ({ children }) => {
       cart = {
         products: [],
         totalPrice: 0,
+        cartDiscount: 0,
       };
     }
     let isProductInCart = cart.products.some(
@@ -95,6 +99,7 @@ const CartContextProvider = ({ children }) => {
       cart = {
         products: [],
         totalPrice: 0,
+        cartDiscount: 0,
       };
     }
     const index = cart.products.findIndex(
@@ -113,6 +118,7 @@ const CartContextProvider = ({ children }) => {
       if (item.item.color == color) {
         item.count = count;
         item.subPrice = calcSubPrice(item);
+        item.discount = calcDiscount(cart.products);
       }
       return item;
     });
@@ -121,6 +127,10 @@ const CartContextProvider = ({ children }) => {
     cart.totalCount = totalCount(cart.products);
     localStorage.setItem("cart", JSON.stringify(cart));
     getCart();
+  }
+
+  function deleteAll() {
+    localStorage.removeItem("cart");
   }
 
   return (
@@ -133,6 +143,7 @@ const CartContextProvider = ({ children }) => {
         checkItemInCart,
         deleteFromCart,
         changeProductCount,
+        deleteAll,
       }}
     >
       {children}

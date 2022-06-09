@@ -14,6 +14,7 @@ import {Link} from "react-router-dom"
 
 const DetailsCard = ({ item, colors }) => {
     const { addDelToFav, isProdInFav } = useContext(favoriteContext)
+    const discount = Math.ceil(item.price - (item.price * item.discount / 100))
     const [inFav, setInFav] = useState(isProdInFav(item.id))
     const {getCart,addProductToCart, checkItemInCart } = useContext(cartContext);
     const [toggleColor, setToggleColor] = useState(item.color)
@@ -100,7 +101,10 @@ const DetailsCard = ({ item, colors }) => {
                                         ))}
                             </div>
                         </div>
-                        <p className='details-price'>{item.price.toLocaleString().replace(',', ' ')} p</p>
+                        {item.discount ?
+                            <div><span className='deatils-discount'>{discount.toLocaleString().replace(',', ' ')} p</span><span className='details-price-discount'>{item.price.toLocaleString().replace(',', ' ')} p</span></div> :  
+                           <span className='details-price'>{item.price.toLocaleString().replace(',', ' ')} p</span> 
+                        }   
                         <p className='details-text-intro'>О товаре:</p>
                             <p className='details-text'>{item.text}</p>
                         <div className='details-bottom'> 

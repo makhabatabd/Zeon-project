@@ -33,6 +33,40 @@
     color: #393939;
 }
 
+.paginationBttns {
+    width: 80%;
+    height: 40px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 64px;
+}
+
+.paginationBttns a {
+    width: 44px;
+    height: 44px;
+    margin: 4px;
+    color: #979797;
+    cursor: pointer;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.paginationBttns a:hover {
+    color: white;
+    background-color: black;
+}
+
+.paginationActive a {
+    color: white;
+    background-color: black;
+}
+
+
 @media screen and (max-width: 320px) {
     .search-random-cards {
         display: none;

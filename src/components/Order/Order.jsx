@@ -7,9 +7,12 @@ import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input';
 import CloseIcon from '@mui/icons-material/Close';
 import { useContext } from 'react';
 import { summerContext } from '../../context/SummerCollection';
+import { cartContext } from '../../context/CartContext';
+import { useEffect } from 'react';
 
 const Order = ({open, setOpen}) => {
-    const {addOrder } = useContext(summerContext)
+    const { addOrder } = useContext(summerContext)
+    const {deleteAll, getCart, cart} = useContext(cartContext)
     const [phone, setPhone] = useState("")
     const [success, setSuccess] = useState(false)
     const navigate = useNavigate()
@@ -24,6 +27,9 @@ const Order = ({open, setOpen}) => {
     })
     const [checked, setChecked] = useState(false)
     const [button, setButton] = useState(false)
+    useEffect(() => {
+        getCart()
+    },[cart])
 
     const handleInputChange = (e) => {
         let newOrder = {
@@ -120,6 +126,8 @@ const Order = ({open, setOpen}) => {
                             setSuccess(false)
                             setOpen(false)
                             navigate("/")
+                            deleteAll()
+
                 }}>
                     Продолжить покупки
                 </button>

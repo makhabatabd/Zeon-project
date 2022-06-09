@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import { allContext } from '../../context/AllContext';
 import SearchPageCard from './SearchPageCard';
 import "./SearchPage.css"
@@ -10,21 +10,49 @@ import TableRow from '@mui/material/TableRow';
 import Table from '@mui/material/Table';
 import Paper from '@mui/material/Paper';
 import Random from "../Random/Random";
+import { makeStyles } from "@material-ui/styles";
 import axios from 'axios';
+import Pagination from '@mui/material/Pagination';
+
+const useStyles = makeStyles(() => ({
+  ul: {
+    "& .MuiPaginationItem-root": {
+        color: "#979797",
+        backgroundColor: "white", 
+        border: "none", 
+        borderRadius:"0"
+    },
+  },
+}));
 
 const SearchPage = () => {
-    const { getAllProducts, data } = useContext(allContext)
-    useEffect(() => {
+  const { getAllProducts ,data } = useContext(allContext)
+  const classes = useStyles();
+    const [extraProducts, setExtraProducts] = useState([])
+    const params = useParams()
+   useEffect(() => {
         getAllProducts()
     }, [])
     const allData = data.reduce((acc, val) => acc.concat(val), [])
-    const [extraProducts, setExtraProducts] = useState([])
-    const params = useParams()
     const searchItem = params.searchValue
 
     const newFilter = allData.filter((value) => {
             return value.title.toLowerCase().includes(searchItem.toLowerCase());
     });
+
+  const [page, setPage] = useState(1)
+  const [limit, setLimit] = useState(12)
+  const paginateData = newFilter.slice((page - 1) * limit, page * limit)
+  const count = Math.ceil(newFilter.length / limit)
+
+  useEffect(() => {
+    if (window.innerWidth < 321) {
+    setLimit(4)
+    } else {
+      setLimit(12)
+  }
+  }, [])
+
         useEffect(() => {
       axios.get(`http://localhost:8000/summer?_limit=2`)
         .then(response => {
@@ -52,14 +80,24 @@ const SearchPage = () => {
     
     return (
         <div className='search-page'>
-            {newFilter.length > 0 ? (
+            {paginateData.length > 0 ? (
             <div className='container'>
             <h2 className='search-title'>Результаты поиска по запросу: {searchItem}</h2>
             <div className='search-cards'>
-            {newFilter.map((item) => (
+            {paginateData.map((item) => (
                 <SearchPageCard item={item} key={item.id}/>
             ))}
-        </div>
+            </div>
+            <div className='summer-pagination'>
+              <Pagination
+                sx={{flexWrap:"wrap"}}
+                    siblingCount={0}
+                      variant="outlined" classes={{ ul: classes.ul }} 
+                      count={count}
+                      page={+page}
+                      onChange={(event, pageVal) => setPage(pageVal)}
+                />
+              </div>
             </div>
             ) : (
                     <div className='container'>

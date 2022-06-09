@@ -18,6 +18,7 @@ const HitDetailsCard = ({item, id, colors}) => {
     const {getCart,addProductToCart, checkItemInCart } = useContext(cartContext);
     const [toggleColor, setToggleColor] = useState(item.color)
     const [checkItem, setCheckItem] = useState(checkItemInCart(item.id, item.color = toggleColor));
+    const discount = Math.ceil(item.price - (item.price * item.discount / 100))
     const navigate = useNavigate()
     useEffect(() => {
         getCart()
@@ -101,7 +102,10 @@ const HitDetailsCard = ({item, id, colors}) => {
                                         ))}
                             </div>
                         </div>
-                        <p className='details-price'>{item.price.toLocaleString().replace(',', ' ')} p</p>
+                        {item.discount ?
+                            <div><span className='deatils-discount'>{discount.toLocaleString().replace(',', ' ')} p</span><span className='details-price-discount'>{item.price.toLocaleString().replace(',', ' ')} p</span></div> :  
+                           <span className='details-price'>{item.price.toLocaleString().replace(',', ' ')} p</span> 
+                        }     
                         <p className='details-text-intro'>О товаре:</p>
                             <p className='details-text'>{item.text}</p>
                         <div className='details-bottom'> 
