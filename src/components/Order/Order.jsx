@@ -7,7 +7,6 @@ import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input';
 import CloseIcon from '@mui/icons-material/Close';
 import { useContext } from 'react';
 import { summerContext } from '../../context/SummerCollection';
-import Alert from '@mui/material/Alert';
 
 const Order = ({open, setOpen}) => {
     const {addOrder } = useContext(summerContext)
@@ -32,21 +31,21 @@ const Order = ({open, setOpen}) => {
             [e.target.name]: e.target.value, 
             phone
         }
-        setData(newOrder)
-        setButton(true)
-  };
-    function save() {
         if (
             !data.name || 
             !data.surname ||
             !data.email ||
             !data.country ||
             !data.city ||
-            !checked
+            !checked ||
+            !(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(data.email))
         ) {
             setError(true)
-            return
         } 
+        setData(newOrder)
+        setButton(true)
+    };
+    function save() {
         addOrder(data)
         setOpen(false)
         setSuccess(true)
@@ -55,6 +54,7 @@ const Order = ({open, setOpen}) => {
         let checked = e.target.checked
         if (checked) {
             setChecked(true)
+            setError(false)
         }
     }
 
@@ -64,14 +64,13 @@ const Order = ({open, setOpen}) => {
     };
 
     return (
-        <div style={{ position: "relative" }}>
-            <Dialog PaperProps={{ sx: { width: "480px", height: "740px" } }} open={open} onClose={handleClose}>
-                {error ? <Alert sx={{position:"absolute", top:"0%", left:"0%"}} severity="error">Fill in</Alert> : null}
+               <div style={{ position: "relative" }}>
+                <Dialog PaperProps={{ sx: { width: {xs: "320px", md:"480px"}, height: {xs: "700px", md:"746px"} } }} open={open} onClose={handleClose}>
         <div className='dialog-inner'>
-            <DialogContent>
+            <DialogContent sx={{height: {xs:"680px", md:"680px"}, padding:{xs: "10px", md:"21px"}}}>
             <div style={{display:"flex", justifyContent:"space-between", alignItems:"flex-start"}}>
                 <h2>Оформление заказа</h2>
-                <CloseIcon onClick={handleClose} />
+                <CloseIcon sx={{padding: 0}} onClick={handleClose} />
                 </div>
             <label className='order-label' htmlFor="name">Ваше имя</label>
             <br/>
@@ -89,7 +88,7 @@ const Order = ({open, setOpen}) => {
             <br/>
             <label className='order-label'  htmlFor="">Ваш номер телефона</label>
             <br/>
-            <PhoneInput international value={phone} onChange={setPhone} defaultCountry="KG" className='phone-input' placeholder="Введите номер телефона"/>
+            <PhoneInput placeholder="Enter phone number" international value={phone} onChange={setPhone} defaultCountry="KG" className='phone-input'/>
             <br/>
             <label className='order-label'  htmlFor="country">Страна</label>
             <br/>
@@ -100,8 +99,8 @@ const Order = ({open, setOpen}) => {
             <input onChange={handleInputChange} className='order-input' type="text" name='city' id='city' placeholder='Город' />
             <br/>
             <input className='order-checkbox' type="checkbox" value={checked} onChange={value} name="checked"  />
-            <label htmlFor="checked" className='label'>Согласен с условиями <Link style={{ textDecoration: 'none', color: "#2F80ED", fontSize:"15px" }} to={'/offerta'}>публичной оферты</Link></label>
-                    {button ? <button onClick={() => save()
+            <label htmlFor="checked" className='label'>Согласен с условиями <Link className='cart-link' style={{ textDecoration: 'none', color: "#2F80ED" }} to={'/offerta'}>публичной оферты</Link></label>
+                    {button && !error ? <button onClick={() => save()
             } className='active-button'>Заказать</button> : <button className='order-button'>Заказать</button>}
         </DialogContent>
         </div>
@@ -127,7 +126,7 @@ const Order = ({open, setOpen}) => {
                 </DialogContent>
             </div>
         </Dialog>
-        </div>
+            </div>
     );
 };
 

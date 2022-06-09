@@ -17,7 +17,7 @@ const HitDetails = () => {
         })  
         }, [])
     useEffect(() => {
-      axios.get("http://localhost:8000/colors?_limit=4")
+      axios.get("http://localhost:8000/colors")
         .then(response => {
             setColors(response.data)
          })

@@ -10,8 +10,9 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Table from '@mui/material/Table';
 import Paper from '@mui/material/Paper';
+import {Link} from "react-router-dom"
 
-const DetailsCard = ({ item, id, colors}) => {
+const DetailsCard = ({ item, colors }) => {
     const { addDelToFav, isProdInFav } = useContext(favoriteContext)
     const [inFav, setInFav] = useState(isProdInFav(item.id))
     const {getCart,addProductToCart, checkItemInCart } = useContext(cartContext);
@@ -19,12 +20,33 @@ const DetailsCard = ({ item, id, colors}) => {
     const [checkItem, setCheckItem] = useState(checkItemInCart(item.id, item.color = toggleColor));
     const navigate = useNavigate()
     useEffect(() => {
-        getCart()
+        getCart()   
     }, [])
+
     useEffect(() => {
         setCheckItem(checkItemInCart(item.id, item.color=toggleColor));
     }, [toggleColor])
     return (
+        <>
+            <div className='breadcrumps'>
+                <div className='container'>
+                <span className='breadcrumps-span'>
+                    <Link style={{textDecoration: 'none'}} to={'/'}>
+                        <span>Главная</span>
+                        </Link>
+                        <span>/</span>
+                    <Link style={{textDecoration: 'none'}} to={'/collection'}>
+                        <span>Коллекции</span>
+                        </Link>
+                        <span>/</span>
+                    <Link style={{textDecoration: 'none'}} to={'/summer'}>
+                        <span>Лето 2022</span>
+                        </Link>
+                        <span>/</span>
+                        <span className='item-title'>{item.title}</span>
+                    </span>
+                 </div>
+            </div>
         <div className='main-div-details'>
             <div className='container'>
                 <div className='main-div-inner'>
@@ -71,12 +93,14 @@ const DetailsCard = ({ item, id, colors}) => {
                         <div className='details-circles'>
                                 <p>Цвет</p>
                             <div className='detail-circles'>
-                                {colors.map((el) => (
-                                    <div onClick={() => setToggleColor(el.color)} className='circle' style={{backgroundColor: el.color}} key={item.id} ></div>
-                            ))}
+                                        {colors.map((el) => (
+                                            <div key={item.id + el.color} onClick={() => setToggleColor(el.color)} className={toggleColor === el.color ? "active" : "not-active"}>
+                                                <div className='circles' style={{ backgroundColor: el.color }} ></div>
+                                            </div>
+                                        ))}
                             </div>
                         </div>
-                        <p className='details-price'>{item.price} p</p>
+                        <p className='details-price'>{item.price.toLocaleString().replace(',', ' ')} p</p>
                         <p className='details-text-intro'>О товаре:</p>
                             <p className='details-text'>{item.text}</p>
                         <div className='details-bottom'> 
@@ -128,8 +152,8 @@ const DetailsCard = ({ item, id, colors}) => {
                 </div>
                 </div>
             </div>
-            
-        </div>
+            </div>
+            </>
     );
 };
 

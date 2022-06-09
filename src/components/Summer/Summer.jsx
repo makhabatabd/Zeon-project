@@ -24,11 +24,10 @@ const Summer = () => {
     const [page, setPage] = useState(+searchParams.get("_page") || 1);
     const classes = useStyles();
     const [screenWidth, setScreenWidth] = useState(window.innerWidth)
-
-
     useEffect(() => {
         setScreenWidth(window.innerWidth)
     }, [window.innerWidth])
+
     
     useEffect(() => {
         if (screenWidth < 321) {
@@ -75,7 +74,7 @@ const Summer = () => {
                 <div className='summer-pagination'>
                     <Pagination
                     variant="outlined" classes={{ ul: classes.ul }} 
-                    count={summerCount}
+                    count={+summerCount}
                     page={+page}
                     onChange={(event, pageVal) => setPage(pageVal)}
                     />

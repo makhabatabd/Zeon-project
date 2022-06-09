@@ -1,11 +1,13 @@
 {
-  "products": [],
-  "header": [{
-    "logo": "https://cdn.discordapp.com/attachments/979601812472598619/979627292156395580/unknown.png",
-    "number": "+996 000 00 00 00",
-    "id": 1
-  }],
-  "news": [{
+  "header": [
+    {
+      "logo": "https://cdn.discordapp.com/attachments/979601812472598619/979627292156395580/unknown.png",
+      "number": "+996 000 00 00 00",
+      "id": 1
+    }
+  ],
+  "news": [
+    {
       "img": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/94023c109854731.60dec6c8d8a02.jpg",
       "title": "Lorem ipsum dolor sit amet",
       "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue.Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue.",
@@ -240,7 +242,8 @@
       "id": 43
     }
   ],
-  "help": [{
+  "help": [
+    {
       "title": "Как я могу заказать одежду?",
       "id": 1,
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit. Ut cras ut rhoncus fermentum pharetra a sit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit."
@@ -276,11 +279,14 @@
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit. Ut cras ut rhoncus fermentum pharetra a sit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit."
     }
   ],
-  "image": [{
-    "img": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/94023c109854731.60dec6c8d8a02.jpg",
-    "id": 1
-  }],
-  "hits": [{
+  "image": [
+    {
+      "img": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/94023c109854731.60dec6c8d8a02.jpg",
+      "id": 1
+    }
+  ],
+  "hits": [
+    {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979364513835020328/unknown.png",
       "title": "Вечернее платье",
       "price": 1365,
@@ -294,7 +300,8 @@
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
-      "discount": 10
+      "discount": 10, 
+      "color": "#73A39D"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979364663668117514/unknown.png",
@@ -309,7 +316,8 @@
       "artikul": "Платье PL984/dakota",
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
-      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png"
+      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png", 
+      "color": "#73A39D"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979365676814860288/unknown.png",
@@ -324,7 +332,8 @@
       "artikul": "Платье PL984/dakota",
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
-      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png"
+      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png", 
+      "color": "#73A39D"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979365807970734130/unknown.png",
@@ -340,7 +349,8 @@
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
-      "discount": 20
+      "discount": 20, 
+      "color": "#73A39D"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979601812472598619/979602619561570324/unknown.png",
@@ -355,7 +365,8 @@
       "artikul": "Платье PL984/dakota",
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
-      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png"
+      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png", 
+      "color": "#73A39D"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979366071993761842/unknown.png",
@@ -371,7 +382,8 @@
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
-      "discount": 10
+      "discount": 10, 
+      "color": "#73A39D"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979366160699109467/unknown.png",
@@ -386,7 +398,8 @@
       "artikul": "Платье PL984/dakota",
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
-      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png"
+      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png", 
+      "color": "#73A39D"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979367807294795816/unknown.png",
@@ -401,7 +414,8 @@
       "artikul": "Платье PL984/dakota",
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
-      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png"
+      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
+      "color": "#73A39D"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979364513835020328/unknown.png",
@@ -416,7 +430,8 @@
       "artikul": "Платье PL984/dakota",
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
-      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png"
+      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
+      "color": "#73A39D"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979601812472598619/979602619561570324/unknown.png",
@@ -432,7 +447,8 @@
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
-      "discount": 50
+      "discount": 50,
+      "color": "#73A39D"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979365676814860288/unknown.png",
@@ -447,7 +463,8 @@
       "artikul": "Платье PL984/dakota",
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
-      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png"
+      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
+      "color": "#73A39D"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979365807970734130/unknown.png",
@@ -463,7 +480,8 @@
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
-      "discount": 60
+      "discount": 60,
+      "color": "#73A39D"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979367807294795816/unknown.png",
@@ -478,7 +496,8 @@
       "artikul": "Платье PL984/dakota",
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
-      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png"
+      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
+      "color": "#73A39D"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979364513835020328/unknown.png",
@@ -494,7 +513,8 @@
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
-      "discount": 10
+      "discount": 10,
+      "color": "#73A39D"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979601812472598619/979602619561570324/unknown.png",
@@ -509,7 +529,8 @@
       "artikul": "Платье PL984/dakota",
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
-      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png"
+      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
+      "color": "#73A39D"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979367807294795816/unknown.png",
@@ -524,10 +545,12 @@
       "artikul": "Платье PL984/dakota",
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
-      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png"
+      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
+      "color": "#73A39D"
     }
   ],
-  "brandnew": [{
+  "brandnew": [
+    {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979367348249186404/unknown.png",
       "title": "Вечернее платье",
       "price": 1365,
@@ -541,7 +564,8 @@
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
-      "discount": 10
+      "discount": 10,
+      "color": "#73A39D"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979367527148814336/unknown.png",
@@ -556,7 +580,8 @@
       "artikul": "Платье PL984/dakota",
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
-      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png"
+      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
+      "color": "#73A39D"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979367657570701322/unknown.png",
@@ -571,7 +596,8 @@
       "artikul": "Платье PL984/dakota",
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
-      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png"
+      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
+      "color": "#73A39D"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979367807294795816/unknown.png",
@@ -586,7 +612,8 @@
       "artikul": "Платье PL984/dakota",
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
-      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png"
+      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
+      "color": "#73A39D"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979367348249186404/unknown.png",
@@ -601,7 +628,8 @@
       "artikul": "Платье PL984/dakota",
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
-      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png"
+      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
+      "color": "#73A39D"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979367527148814336/unknown.png",
@@ -617,7 +645,8 @@
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
-      "discount": 10
+      "discount": 10,
+      "color": "#73A39D"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979367657570701322/unknown.png",
@@ -633,7 +662,8 @@
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
       "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
-      "discount": 20
+      "discount": 20,
+      "color": "#73A39D"
     },
     {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979367807294795816/unknown.png",
@@ -648,10 +678,12 @@
       "artikul": "Платье PL984/dakota",
       "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
       "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
-      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png"
+      "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
+      "color": "#73A39D"
     }
   ],
-  "collection": [{
+  "collection": [
+    {
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979369314194980924/unknown.png",
       "text": "Повседневная одежда",
       "id": 25
@@ -742,15 +774,18 @@
       "id": 42
     }
   ],
-  "about": [{
-    "img1": "https://cdn.discordapp.com/attachments/979601812472598619/979628102776930354/unknown.png",
-    "img2": "https://cdn.discordapp.com/attachments/979601812472598619/979628196301525012/unknown.png",
-    "img3": "https://cdn.discordapp.com/attachments/979601812472598619/979628306620104744/unknown.png",
-    "title": "О нас",
-    "text": "У нас Вы найдёте всё, что Вам так нужно. Ассортимент магазина постоянно расширяется и дополняется в зависимости от пожеланий клиентов. Женская одежда из наших коллекций – это комфортная, стильная и качественная одежда не только на каждый день, но и для любых ситуаций по доступным ценам.Натуральные материалы, продуманные силуэты, современный дизайн и возможность легкого сочетания моделей помогут Вам всегда оставаться в центре внимания и чувствовать себя уместно в любой ситуации.Если Вы любите одеваться ярко, модно и оригинально, у нас Вы найдете все необходимое, чтобы всегда быть в центре внимания. У нас большая коллекция для любого торжества и праздника, которая сможет удовлетворить вкус самой взыскательной модницы! А для деловых ситуаций, в которых Вам непременно нужно выглядеть элегантно и стильно, мы предлагаем Вам одежду из коллекции 'деловой стиль и офис'. Мода постоянно диктует нам свои требования и для современной девушки, желающей идти в ногу со временем, важно иметь возможность постоянно пополнять свой гардероб стильной одеждой.",
-    "id": 1
-  }],
-  "pluses": [{
+  "about": [
+    {
+      "img1": "https://cdn.discordapp.com/attachments/979601812472598619/979628102776930354/unknown.png",
+      "img2": "https://cdn.discordapp.com/attachments/979601812472598619/979628196301525012/unknown.png",
+      "img3": "https://cdn.discordapp.com/attachments/979601812472598619/979628306620104744/unknown.png",
+      "title": "О нас",
+      "text": "У нас Вы найдёте всё, что Вам так нужно. Ассортимент магазина постоянно расширяется и дополняется в зависимости от пожеланий клиентов. Женская одежда из наших коллекций – это комфортная, стильная и качественная одежда не только на каждый день, но и для любых ситуаций по доступным ценам.Натуральные материалы, продуманные силуэты, современный дизайн и возможность легкого сочетания моделей помогут Вам всегда оставаться в центре внимания и чувствовать себя уместно в любой ситуации.Если Вы любите одеваться ярко, модно и оригинально, у нас Вы найдете все необходимое, чтобы всегда быть в центре внимания. У нас большая коллекция для любого торжества и праздника, которая сможет удовлетворить вкус самой взыскательной модницы! А для деловых ситуаций, в которых Вам непременно нужно выглядеть элегантно и стильно, мы предлагаем Вам одежду из коллекции 'деловой стиль и офис'. Мода постоянно диктует нам свои требования и для современной девушки, желающей идти в ногу со временем, важно иметь возможность постоянно пополнять свой гардероб стильной одеждой.",
+      "id": 1
+    }
+  ],
+  "pluses": [
+    {
       "img": "https://cdn.discordapp.com/attachments/979601812472598619/979668887266271252/unknown.png",
       "title": "Удобные способы оплаты",
       "text": "Мы предлагаем возможность безналичной оплаты",
@@ -775,7 +810,8 @@
       "id": 4
     }
   ],
-  "main-collection": [{
+  "main-collection": [
+    {
       "img": "https://cdn.discordapp.com/attachments/979601812472598619/979704752759783444/unknown.png",
       "title": "Повседневная одежда 2022",
       "id": 43
@@ -836,7 +872,8 @@
       "id": 54
     }
   ],
-  "summer": [{
+  "summer": [
+    {
       "img": "https://cdn.discordapp.com/attachments/979601812472598619/980360810209636362/unknown.png",
       "title": "Вечернее платье",
       "price": 1365,
@@ -1165,7 +1202,8 @@
       "color": "#73A39D"
     }
   ],
-  "new": [{
+  "new": [
+    {
       "img": "https://cdn.discordapp.com/attachments/979601812472598619/982255764292915320/unknown.png",
       "price": 12000,
       "title": "The Organic Cotton Clothes",
@@ -1203,17 +1241,20 @@
       "discount": 5
     }
   ],
-  "footer": [{
-    "img": "https://cdn.discordapp.com/attachments/979601812472598619/980393534639181894/unknown.png",
-    "phone": "+996 500 123 456",
-    "mail": "mail@gmail.com",
-    "insta": "Instagram",
-    "tel": "Telegram",
-    "wa": "Whatsapp",
-    "text": "Developed by Zeon 2022",
-    "id": 1
-  }],
-  "order": [{
+  "footer": [
+    {
+      "img": "https://cdn.discordapp.com/attachments/979601812472598619/980393534639181894/unknown.png",
+      "phone": "+996 500 123 456",
+      "mail": "mail@gmail.com",
+      "insta": "Instagram",
+      "tel": "Telegram",
+      "wa": "Whatsapp",
+      "text": "Developed by Zeon 2022",
+      "id": 1
+    }
+  ],
+  "order": [
+    {
       "name": "wefwfwe",
       "surname": "ewfwefwf",
       "email": "wefwefwfe@gmail.com",
@@ -1248,9 +1289,163 @@
       "city": "Bishkek",
       "phone": "",
       "id": 7
+    },
+    {
+      "name": "ewdwdefwf",
+      "surname": "wefwefwfwf",
+      "email": "wefwefwf",
+      "country": "ferfrfweferf",
+      "city": "efwrferferfwfrewrf",
+      "phone": "+99621313123213",
+      "id": 8
+    },
+    {
+      "name": "ewfwfe",
+      "surname": "wewfwefwef",
+      "email": "wefwfeewfwef",
+      "country": "ergewrgwregwerg",
+      "city": "ergwrgewwewgwgwer",
+      "phone": "+996234133214124",
+      "id": 9
+    },
+    {
+      "name": "efwefwfw",
+      "surname": "wefewfwfwf",
+      "email": "wefwefwefwef",
+      "country": "wfwafwerfdaefwefa",
+      "city": "rfewrgrerfgretgefafwrthtgsafeg",
+      "phone": "+9963454242424234",
+      "id": 10
+    },
+    {
+      "name": "kmlkm",
+      "surname": "kmlkmlkm",
+      "email": "kmlkmlkml",
+      "country": " nklm;;lk",
+      "city": "knmlkmlkmkl",
+      "phone": "",
+      "id": 11
+    },
+    {
+      "name": "wefwfwfe",
+      "surname": "wefwfwfe",
+      "email": "wefwfwfwef",
+      "country": "egewrgwerg",
+      "city": "erwqfewfqefrwerw",
+      "phone": "+996324214131313123123",
+      "id": 12
+    },
+    {
+      "name": "efwfwfwef",
+      "surname": "wefwefwefew",
+      "email": "wefwefwfwf",
+      "country": "dgrgwrgertgertg",
+      "city": "trgrtgrtgerg",
+      "phone": "+996324234234243",
+      "id": 13
+    },
+    {
+      "name": "dsfafdfsaf",
+      "surname": "efawefeqafr",
+      "email": "efqwefwqef@gmail.com",
+      "country": "sgaegrwgggsrgr",
+      "city": "egwergwegrerwgwerge",
+      "phone": "+99632412124234",
+      "id": 14
+    },
+    {
+      "name": "egraegqerg",
+      "surname": "egqegwerrge",
+      "email": "ergewrgerg@gmail.com",
+      "country": "ereqewfqwefwqef",
+      "city": "wqefqwefqwefqwef",
+      "phone": "+996987987080",
+      "id": 15
+    },
+    {
+      "name": "dvsdvsv",
+      "surname": "sdvsvdsv",
+      "email": "sdvsdvsvsv@gmail.com",
+      "country": "ergwrgerrwegr",
+      "city": "rgwegrwergewrg",
+      "phone": "+996234122132414",
+      "id": 16
+    },
+    {
+      "name": "efwwfew",
+      "surname": "afewqfqwfe",
+      "email": "efewqefwaef@gmail.com",
+      "country": "fvgwevvdfvwer",
+      "city": "ervwervwerevwe",
+      "phone": "+9962132132141234",
+      "id": 17
+    },
+    {
+      "name": "ewqfweqewfw",
+      "surname": "efqwefqfwqffwqef",
+      "email": "fqewfqefwqfe@gmail.com",
+      "country": "ergrgrwvrtrsg",
+      "city": "ergwrgergwegewgr",
+      "phone": "+996234156432",
+      "id": 18
+    },
+    {
+      "name": "wd2e23e",
+      "surname": "23e2e323e23e",
+      "email": "23e23e23e23e@gmail.com",
+      "country": "erfwefwerf",
+      "city": "fweqefqewfqwefef",
+      "phone": "+996231313123",
+      "id": 19
+    },
+    {
+      "name": "jbjkhbjkbjb",
+      "surname": "jbkjbjkbkj",
+      "email": "hvhjvbj@gmail.com",
+      "country": "fqefwerfwegwe",
+      "city": "ewrfewgrergegr",
+      "phone": "+99632456234234",
+      "id": 20
+    },
+    {
+      "name": "fewefwef",
+      "surname": "wefwfwef",
+      "email": "wefwefwef@gmail.com",
+      "country": "ergwethrgweafwdqes",
+      "city": "ewrtehrgwfewqrgty",
+      "phone": "+99623414556432",
+      "id": 21
+    },
+    {
+      "name": "fasdasfaf",
+      "surname": "",
+      "email": "",
+      "country": "",
+      "city": "",
+      "phone": "",
+      "id": 22
+    },
+    {
+      "name": "wefwewfwfew",
+      "surname": "wefwefwfew",
+      "email": "wefwefwef",
+      "country": "",
+      "city": "",
+      "phone": "",
+      "id": 23
+    },
+    {
+      "name": "werwwr",
+      "surname": "werwerewerw",
+      "email": "werwerwrwre@gmail.com",
+      "country": "ergwergtwerg",
+      "city": "ergewgewgerw",
+      "phone": "+9962345643245",
+      "id": 24
     }
   ],
-  "colors": [{
+  "colors": [
+    {
       "color": "#73A39D",
       "id": 1
     },

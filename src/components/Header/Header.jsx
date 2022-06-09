@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { headerContext } from '../../context/HeaderContext';
 import "./Header.css"
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Hidden from '@mui/material/Hidden';
 import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu';
@@ -15,6 +15,7 @@ import { cartContext } from '../../context/CartContext';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import Typography from '@mui/material/Typography';
+import Search from '../Search/Search';
 
 const Header = () => {
     const { getHeader, header } = useContext(headerContext)
@@ -26,6 +27,7 @@ const Header = () => {
     const [success, setSuccess] = useState(false)
     const [name, setName] = useState("")
     const [phone, setPhone] = useState("")
+    const navigate = useNavigate()
     useEffect(() => {
         getHeader()
     }, [])
@@ -80,14 +82,7 @@ const Header = () => {
                                     </span>  
                                     {showInput ? <input placeholder='Поиск' type="text" className='input-field' style={{width: "300px",height: "30px", border: "none", border: "0.3px solid #E0E0E0", position:"absolute", top:"10%", left: "10px", marginBottom:"10px"}} /> : null} 
                                 </div>
-                        <div className='search'>
-                            <div className='input-icon'>
-                                <span className='icon'>
-                                    <img width="35px" height="35px" src={require('../../images/small-header.png')} alt="search" />
-                                </span>
-                                <input className='input-field' style={{background: "#F8F8F8", border: "0.3px solid #E0E0E0"}} placeholder='Поиск' type="text" />
-                            </div>
-                                </div>
+                                <Search/>
                             <Hidden xsDown smDown>
                                 <div className='header-extra-info'>
                                         <div style={{display: "flex", alignItems:"center"}}>
@@ -147,11 +142,11 @@ const Header = () => {
                                         </div>
                                 </div>
                                     <div>
-                                        <div style={{ display: "flex", alignItems: "center" }}>
+                                        <div onClick={()=>navigate("/favorite")} style={{ display: "flex", alignItems: "center" }}>
                                                 <img style={{marginRight: "6px"}} width="16px" src={require('../../images/heart-icon.png')} alt="the heart" />
                                                 <p style={{fontWeight: "500", fontSize: "13px"}}>Избранное</p>
                                         </div>
-                                        <div style={{ display: "flex", alignItems: "center" }}>
+                                        <div onClick={()=>navigate("/cart")} style={{ display: "flex", alignItems: "center" }}>
                                                 <img style={{marginRight: "6px"}} width="16px" src={require('../../images/heart-icon.png')} alt="the heart" />
                                                 <p style={{fontWeight: "500", fontSize: "13px"}}>Корзина</p>
                                         </div >

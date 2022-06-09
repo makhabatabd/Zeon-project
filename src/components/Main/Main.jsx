@@ -219,7 +219,7 @@ const Main = () => {
                                                 <div className='collection-words'>
                                                     <p>{item.text}</p>
                                                 </div>
-                                                <Link style={{textDecoration: 'none'}} to={'/summer'}>
+                                                <Link style={{textDecoration: 'none'}} to={'/collection'}>
                                                     <button className='collection-bottom'>Смотреть все
                                                         <ArrowForwardIosIcon sx={{ fill: '#fff'}} />
                                                     </button>
@@ -264,7 +264,7 @@ const Main = () => {
                 <DialogContent>
                 <h1 className='dialog-title'>Если у Вас остались вопросы</h1>
                 <Typography>
-                    <p className='dialog-text'>Оставьте заявку и мы обязательно Вам перезвоним</p>
+                    <span className='dialog-text'>Оставьте заявку и мы обязательно Вам перезвоним</span>
                 </Typography>
                 <Typography>
                 <input  onChange={(e)=>setName(e.target.value)} className='input1 input' type="text" placeholder='Как к Вам обращаться?'/>

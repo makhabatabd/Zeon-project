@@ -70,7 +70,7 @@ const Collection = () => {
                 <h3 className='collection-main-title'>Коллекции</h3>
             <div className='collection-cards'>
                     {collection.map((item) => (
-                        <div className='collection-card-div'>
+                        <div className='collection-card-div' key={item.id}>
                         <Card sx={{width: "285px",height: "374px",marginRight: "8px",position: "relative", marginBottom: "8px"}} key={item.id} square={true}>
                         <CardMedia sx={{ width: "286px",height: "330px" }}
                             component="img"

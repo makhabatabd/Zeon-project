@@ -31,22 +31,15 @@ function toTitleCase(str) {
   if (str === "cart") {
     return "Корзина";
   }
-  if (str === "details") {
-    return "Детали";
-  }
 }
 
 export default function BasicBreadCrumbs() {
   let location = useLocation();
   const pathnames = location.pathname.split("/").filter((x) => x);
-  console.log(location.pathname);
   return (
     <div className="container">
-      {pathnames.length > 0 ? (
-        <Breadcrumbs
-          className="breadcrumps"
-          style={{ margin: "21px 0", textDecoration: "none" }}
-        >
+      {pathnames.length > 0 && pathnames.length !== 2 ? (
+        <Breadcrumbs className="breadcrumps" style={{ textDecoration: "none" }}>
           <Link
             style={{ textDecoration: "none", color: "#393939" }}
             className="link"
@@ -64,26 +57,6 @@ export default function BasicBreadCrumbs() {
             >
               Коллекции
             </Link>
-          ) : null}
-          {location.pathname == "/details" ? (
-            <>
-              <Link
-                style={{ textDecoration: "none", color: "#393939" }}
-                className="link"
-                component={RouterLink}
-                to="/"
-              >
-                Коллекции
-              </Link>
-              <Link
-                style={{ textDecoration: "none", color: "#393939" }}
-                className="link"
-                component={RouterLink}
-                to="/"
-              >
-                Лето 2022
-              </Link>
-            </>
           ) : null}
           {pathnames.map((value, index) => {
             const last = index === pathnames.length - 1;

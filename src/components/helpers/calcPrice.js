@@ -31,3 +31,15 @@ export function calcDiscount(products) {
     return cartDiscount;
   }
 }
+
+export function totalCount(products) {
+  let totalCount = 0;
+  if (!products) {
+    return totalCount;
+  } else {
+    products.forEach((item) => {
+      totalCount += item.count;
+    });
+    return totalCount;
+  }
+}

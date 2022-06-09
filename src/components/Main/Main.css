@@ -42,6 +42,7 @@
     height: 10px;
     border-radius: 6px;
     margin-right: 12.86px;
+    opacity: 0.5;
 }
 
 .collection-words {
@@ -140,14 +141,25 @@
 
 .favorite {
     position: absolute;
-    top: 2%;
-    right: 6%;
+    top: 1%;
+    right: 3%;
+    z-index: 3;
+    width: 30px !important;
+    height: 21px;
 }
+
+.favorite-hover {
+    position: absolute;
+    top: 1%;
+    right: 3%;
+    z-index: 0;
+}
+
 
 .sm-favorite {
     position: absolute;
-    top: 3%;
-    right: 6%;
+    top: 1%;
+    right: 3%;
 }
 
 .swim-buttons {
@@ -304,11 +316,122 @@ input[type="number"]::-webkit-inner-spin-button {
     color: transparent !important;
     transition: none !important;
     box-shadow: none !important;
+    border: 1px solid #F1F1F1;
+}
+
+.css-1vqzrnv-MuiPaper-root-MuiCard-root:hover {
+    border: 1px solid #EFE4CF;
+}
+
+.css-1vqzrnv-MuiPaper-root-MuiCard-root:hover .favorite-hover {
+    z-index: 3;
 }
 
 .css-o69gx8-MuiCardMedia-root {
     width: 286px;
-    height: 437px
+    height: 437px;
+    position: relative !important;
+}
+
+.hover {
+    display: none;
+}
+
+.hover-1 {
+    position: absolute;
+    top: 75%;
+    left: 3%;
+    width: 70px;
+    height: 3px;
+    background-color: white;
+}
+
+.hover-2 {
+    position: absolute;
+    top: 75%;
+    left: 25%;
+    width: 70px;
+    height: 3px;
+    background-color: white;
+}
+
+.hover-3 {
+    position: absolute;
+    top: 75%;
+    left: 45%;
+    width: 70px;
+    height: 3px;
+    background-color: white;
+}
+
+.hover-4 {
+    position: absolute;
+    top: 75%;
+    left: 70%;
+    width: 70px;
+    height: 3px;
+    background-color: white;
+}
+
+.sm-hover {
+    display: none;
+}
+
+.sm-hover-1 {
+    position: absolute;
+    top: 70%;
+    left: 3%;
+    width: 60px;
+    height: 3px;
+    background-color: white;
+}
+
+.sm-hover-2 {
+    position: absolute;
+    top: 70%;
+    left: 25%;
+    width: 60px;
+    height: 3px;
+    background-color: white;
+}
+
+.sm-hover-3 {
+    position: absolute;
+    top: 70%;
+    left: 45%;
+    width: 60px;
+    height: 3px;
+    background-color: white;
+}
+
+.sm-hover-4 {
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    width: 60px;
+    height: 3px;
+    background-color: white;
+}
+
+.sm-favorite-hover {
+    position: absolute;
+    top: 4%;
+    right: 2%;
+    color: white;
+    z-index: -1;
+    top: 2%;
+    right: 6%;
+}
+
+.sm-card-outter {
+    width: 226px;
+    position: relative;
+    margin-right: 8px;
+}
+
+
+.sm-card-outter:hover .sm-favorite-hover {
+    z-index: 3;
 }
 
 .css-h93ljk-MuiTypography-root {

@@ -10,6 +10,7 @@ const HitDetails = () => {
     const [brandNew, setBrandNew] = useState([])
     const [colors, setColors] = useState([])
     const params = useParams();
+     const {id} = useParams()
     useEffect(() => {
         axios.get("http://localhost:8000/brandnew")
             .then(response => {
@@ -23,11 +24,11 @@ const HitDetails = () => {
         })  
         }, [])
     useEffect(() => {
-      axios.get("http://localhost:8000/colors?_limit=4")
+      axios.get("http://localhost:8000/colors")
         .then(response => {
             setColors(response.data)
          })
-   }, [])
+    }, [])
     return (
         <div style={{backgroundColor: "#ECECEC"}}>
             {item ? <NewDetailsCard colors={colors} id={params.id} item={item} /> : <h1>Loading</h1>}

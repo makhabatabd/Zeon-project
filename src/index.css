@@ -27,3 +27,7 @@ body {
 a {
   cursor: pointer;
 }
+
+.css-11xur9t-MuiPaper-root-MuiTableContainer-root::-webkit-scrollbar {
+  display: none;
+}

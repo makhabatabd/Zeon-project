@@ -16,11 +16,13 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Table from '@mui/material/Table';
 import Paper from '@mui/material/Paper';
+import { useNavigate } from "react-router-dom";
 
 const Favorite = () => {
     const { fav, getFav, deleteProdInFav, favoriteLength } = useContext(favoriteContext)
     const [extraProducts, setExtraProducts] = useState([])
     const [limit, setLimit] = useState(0)
+    const navigate = useNavigate()
    
     useEffect(() => {
         if (window.innerWidth < 321) {
@@ -117,14 +119,15 @@ const Favorite = () => {
                                             component="img"
                                             image={item1.item.img}
                                             alt="fav image"
+                                            onClick={() => navigate(`/details/56`)}
                                         />
                                         <CardContent>
                                              <Typography gutterBottom variant="h5" component="div">
                                                 {item1.item.title}
                                             </Typography>
                                             {item1.item.discount ?
-                                                <div><span className='discount'>{Math.ceil(item1.item.price - (item1.item.price * item1.item.discount / 100))} p</span><span className='price-discount'>{item1.item.price} p</span></div> :  
-                                                <Typography className='hit-price' variant="body2" color="text.secondary"><p className='discount'>{item1.item.price} p</p>
+                                                <div><span className='discount'>{Math.ceil(item1.item.price - (item1.item.price * item1.item.discount / 100)).toLocaleString().replace(',', ' ')} p</span><span className='price-discount'>{item1.item.price.toLocaleString().replace(',', ' ')} p</span></div> :  
+                                                <Typography className='hit-price' variant="body2" color="text.secondary"><span className='discount'>{item1.item.price.toLocaleString().replace(',', ' ')} p</span>
                                                 </Typography>
                                             }   
                                             <Typography variant="body2" color="text.secondary">

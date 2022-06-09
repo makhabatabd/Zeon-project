@@ -10,6 +10,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Table from '@mui/material/Table';
 import Paper from '@mui/material/Paper';
+import {Link} from "react-router-dom"
 
 const NewDetailsCard = ({item, id, colors}) => {
     const { addDelToFav, isProdInFav } = useContext(favoriteContext)
@@ -25,6 +26,28 @@ const NewDetailsCard = ({item, id, colors}) => {
         setCheckItem(checkItemInCart(item.id, item.color=toggleColor));
     }, [toggleColor])
     return (
+        <>
+            <div className='breadcrumps'>
+                <div className='container'>
+                <span className='breadcrumps-span'>
+                    <Link style={{textDecoration: 'none'}} to={'/'}>
+                        <span>Главная</span>
+                        </Link>
+                        <span>/</span>
+                    <Link style={{textDecoration: 'none'}} to={'/collection'}>
+                        <span>Коллекции</span>
+                        </Link>
+                        <span>/</span>
+                    <Link style={{textDecoration: 'none'}} to={'/summer'}>
+                        <span>Новинки</span>
+                        </Link>
+                        <span>/</span>
+                    <Link style={{textDecoration: 'none'}} to={`/details/${item.id}`}>
+                        <span className='item-title'>{item.title}</span>
+                        </Link>
+                    </span>
+                 </div>
+            </div>
         <div className='main-div-details'>
             <div className='container'>
                 <div className='main-div-inner'>
@@ -71,12 +94,14 @@ const NewDetailsCard = ({item, id, colors}) => {
                         <div className='details-circles'>
                         <p>Цвет</p>
                         <div className='detail-circles'>
-                        {colors.map((el) => (
-                        <div onClick={() => setToggleColor(el.color)} className='circle' style={{backgroundColor: el.color}} key={item.id} ></div>
-                        ))}
+                                        {colors.map((el) => (
+                                            <div key={item.id + el.color} onClick={() => setToggleColor(el.color)} className={toggleColor === el.color ? "active" : "not-active"}>
+                                                <div className='circles' style={{ backgroundColor: el.color }} ></div>
+                                            </div>
+                                        ))}
+                            </div>
                         </div>
-                        </div>
-                        <p className='details-price'>{item.price} p</p>
+                        <p className='details-price'>{item.price.toLocaleString().replace(',', ' ')} p</p>
                         <p className='details-text-intro'>О товаре:</p>
                             <p className='details-text'>{item.text}</p>
                         <div className='details-bottom'> 
@@ -106,7 +131,8 @@ const NewDetailsCard = ({item, id, colors}) => {
                                 </div>
                                 <div style={{ backgroundColor: "black"}}>
                                     {inFav ? (
-                                        <FavoriteIcon
+                                            <FavoriteIcon
+                                                className='favorite'
                                             style={{ color: "red", padding:"10px", width:"30px", height:"37px" }}
                                             onClick={() => {
                                                 addDelToFav(item);
@@ -114,7 +140,8 @@ const NewDetailsCard = ({item, id, colors}) => {
                                             }}
                                         />
                                     ) : (
-                                        <FavoriteBorderIcon
+                                                <FavoriteBorderIcon
+                                                    className='favorite-hover'
                                             style={{ color: "white", padding:"10px", width:"30px", height:"37px" }}
                                             onClick={() => {
                                                 addDelToFav(item);
@@ -128,8 +155,8 @@ const NewDetailsCard = ({item, id, colors}) => {
                 </div>
                 </div>
             </div>
-            
-        </div>
+            </div>
+            </>
     );
 };
 

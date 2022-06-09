@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom';
 import { summerContext } from '../../context/SummerCollection';
 import "./Details.css"
 import DetailsCard from './DetailsCard';
-import SummerCard from '../Summer/SummerCard';
 import axios from 'axios';
 import Similiar from '../Similar/Similiar';
 const Details = () => {
@@ -16,7 +15,7 @@ const Details = () => {
     }, []);
 
    useEffect(() => {
-      axios.get("http://localhost:8000/colors?_limit=4")
+      axios.get("http://localhost:8000/colors")
         .then(response => {
             setColors(response.data)
          })
@@ -29,7 +28,7 @@ const Details = () => {
     return (
         <div style={{backgroundColor: "#ECECEC"}}>
             {oneSummer ? (
-                <DetailsCard colors={colors} id={params.id} item={oneSummer} />
+                <DetailsCard item={oneSummer} colors={colors}/>
             ) : <h1>Loading</h1>}
             <div className='container'>
                 <p className='extra-products'>Похожие товары</p>

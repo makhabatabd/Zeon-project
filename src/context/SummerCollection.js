@@ -38,6 +38,7 @@ const reducer = (state = INIT_STATE, action) => {
 
 const SummerContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
+
   async function getSummer() {
     let result = await axios(`${API}${window.location.search}`);
     dispatch({

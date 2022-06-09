@@ -3,6 +3,7 @@ import {
   calcTotalPrice,
   calcSubPrice,
   calcDiscount,
+  totalCount,
 } from "../components/helpers/calcPrice";
 
 export const cartContext = React.createContext();
@@ -34,6 +35,7 @@ const CartContextProvider = ({ children }) => {
         products: [],
         totalPrice: 0,
         cartDiscount: 0,
+        totalCount: 0,
       };
       localStorage.setItem("cart", JSON.stringify(cart));
     }
@@ -69,6 +71,7 @@ const CartContextProvider = ({ children }) => {
     }
     cart.totalPrice = calcTotalPrice(cart.products);
     cart.cartDiscount = calcDiscount(cart.products);
+    cart.totalCount = totalCount(cart.products);
     localStorage.setItem("cart", JSON.stringify(cart));
     getCart();
   }
@@ -115,6 +118,7 @@ const CartContextProvider = ({ children }) => {
     });
     cart.totalPrice = calcTotalPrice(cart.products);
     cart.cartDiscount = calcDiscount(cart.products);
+    cart.totalCount = totalCount(cart.products);
     localStorage.setItem("cart", JSON.stringify(cart));
     getCart();
   }

@@ -3,9 +3,15 @@ import { cartContext } from '../../context/CartContext';
 import CloseIcon from '@mui/icons-material/Close';
 import "./Cart.css"
 import Order from "../Order/Order"
-import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Random from '../Random/Random';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Table from '@mui/material/Table';
+import Paper from '@mui/material/Paper';
+    
 const Cart = () => {
     const { getCart, cart, deleteFromCart, changeProductCount, cartLength } = useContext(cartContext);
     const [open, setOpen] = useState(false)
@@ -39,7 +45,6 @@ const Cart = () => {
            setExtraProducts(prev => [...prev, ...response.data])
          })
     }, [])
-    console.log(cart.products)
     return (
         <div className='main-div'>
             <div className='container'>
@@ -64,7 +69,7 @@ const Cart = () => {
                                                 </div>
                                                 <p className='cart-title'>Размер: {item.item.size}</p>
                                     <p className='cart-price'>{item.item.discount ?
-                                <div><span className='discount'>{Math.ceil(item.item.price - (item.item.price * item.item.discount / 100))} p</span><span className='price-discount'>{item.item.price} p</span></div> :  <p className='discount'>{item.item.price} p</p>} </p>
+                                <div><span className='discount'>{Math.ceil(item.item.price - (item.item.price * item.item.discount / 100)).toLocaleString().replace(',', ' ')} p</span><span className='price-discount'>{item.item.price.toLocaleString().replace(',', ' ')} p</span></div> :  <p className='discount'>{item.item.price.toLocaleString().replace(',', ' ')} p</p>} </p>
                                 <button className='count'
                                     onClick={() =>
                                     changeProductCount(item.count - 1, item.item.color)
@@ -86,7 +91,7 @@ const Cart = () => {
                                     +
                                 </button>
                                 <button className='cart-delete'>
-                                        <CloseIcon onClick={()=>deleteFromCart(item.item.id,item.item.color)}/>
+                                        <CloseIcon sx={{width: "20px"}} onClick={()=>deleteFromCart(item.item.id,item.item.color)}/>
                                 </button>
                                 </div>
                             </div>
@@ -101,20 +106,20 @@ const Cart = () => {
                                 <h3 className='cart-payment-title'>Сумма заказа</h3>
                                 <div className='payment-info'>
                                     <span> Количество линеек:</span>
-                                    <p>{cartLength} линеек ({cartLength * 5} шт.) </p>
+                                    <p>{cart.totalCount} линеек ({cart.totalCount * 5} шт.) </p>
                                 </div>
                                 <div className='payment-info'>
                                     <span>Стоимость: </span>
-                                    <p>{cart.totalPrice} рублей</p>
+                                    <p>{cart.totalPrice.toLocaleString().replace(',', ' ')} рублей</p>
                                 </div>
                                 <div className='payment-info'> 
                                     <span>Скидка :</span>
-                                    <p>{cart.cartDiscount} рублей</p>
+                                    <p>{cart.cartDiscount.toLocaleString().replace(',', ' ')} рублей</p>
                                 </div>
-                                <hr style={{ width: "336px", border: "dashed 1px #BFBFBF", margin:"12px 0 12px 0" }} />
+                                <hr className='hr'/>
                                 <div className='payment-info'>
                                 <span>Итого к оплате</span>
-                                <p>{cart.totalPrice - cart.cartDiscount} рублей</p>
+                                <p>{cart.totalPrice.toLocaleString().replace(',', ' ') - cart.cartDiscount.toLocaleString().replace(',', ' ')} рублей</p>
                                     </div>
                                     {button ?  <button className='mini-info-btn' onClick={() => {
                                     setInfo(false)
@@ -128,7 +133,7 @@ const Cart = () => {
                                 }} className='payment-button'>Оформить заказ</button>
                             </div>: <div className='payment-total-info'>
                                 <span>Итого к оплате</span>
-                                <p>{cart.totalPrice - cart.cartDiscount} рублей</p>
+                                <p>{cart.totalPrice.toLocaleString().replace(',', ' ') - cart.cartDiscount.toLocaleString().replace(',', ' ')} рублей</p>
                                 {button ?  <button className='mini-info-btn' onClick={() => {
                                     setInfo(false)
                                     setButton(false)
@@ -145,24 +150,24 @@ const Cart = () => {
                                 <h3 className='cart-payment-title'>Сумма заказа</h3>
                                 <div className='payment-info'>
                                     <span> Количество линеек:</span>
-                                    <p>{cartLength}шт</p>
+                                    <p>{cart.totalCount} шт</p>
                                 </div>
                                 <div className='payment-info'>
                                     <span>Количество товаров:</span>
-                                    <p>{cartLength * 5}</p>
+                                    <p>{cart.totalCount * 5} шт</p>
                                 </div>
                                 <div className='payment-info'>
                                     <span>Стоимость: </span>
-                                    <p>{cart.totalPrice} рублей</p>
+                                    <p>{cart.totalPrice.toLocaleString().replace(',', ' ')} рублей</p>
                                 </div>
                                 <div className='payment-info'> 
                                     <span>Скидка :</span>
-                                    <p>{cart.cartDiscount} рублей</p>
+                                    <p>{cart.cartDiscount.toLocaleString().replace(',', ' ')} рублей</p>
                                 </div>
-                                <hr style={{ width: "336px", border: "dashed 1px #BFBFBF", margin:"12px 0 12px 0" }} />
+                                <hr style={{ width: "387px", border: "dashed 1px #BFBFBF", margin:"12px 0 12px 0" }} />
                                 <div className='payment-info'>
                                 <span>Итого к оплате</span>
-                                <p>{cart.totalPrice - cart.cartDiscount} рублей</p>
+                                <p>{cart.totalPrice.toLocaleString().replace(',', ' ') - cart.cartDiscount.toLocaleString().replace(',', ' ')} рублей</p>
                                 </div>
                                 <button onClick={() => {
                                     setOpen(true)
@@ -171,15 +176,29 @@ const Cart = () => {
                             </div>
                         </div>
                     </div>)  :  <>
-                        <div>
+                            <div>
                                 <h1 className='cart-bottom-title'>Корзина</h1>
                                 <p className="favorite-text">У вас пока нет товаров в корзине</p>
                                 <h3 className="favorite-title">Возможно Вас заинтересует</h3>
                                 </div>
-                                <div style={{display:"flex"}}>
+                                <div className="maybe-cards">
                                     {extraProducts.map((item) => (
                                         <Random item={item} key={item.id}/>
                                     ))}
+                        </div>
+                         <div className='maybe-table-cards'>
+                                        <TableContainer component={Paper}>
+                                        <Table sx={{ minWidth: 262 }} aria-label="simple table">
+                                            <TableHead>
+                                                <TableRow>
+                                                    {extraProducts.map((item) => (
+                                                        <TableCell key={item.id}>
+                                                            <Random item={item} key={item.id}/>
+                                                        </TableCell>))}
+                                                </TableRow>
+                                            </TableHead>
+                                        </Table>
+                                        </TableContainer>
                                 </div>
                         </>}
             </div>

@@ -28,7 +28,7 @@ const NewCard = ({ item }) => {
                 ) : (
                     <FavoriteBorderIcon
                         style={{ color: "white" }}
-                        className='favorite'
+                        className='favorite-hover'
                         onClick={() => {
                             addDelToFav(item);
                             setInFav(isProdInFav(item.id));
@@ -44,8 +44,8 @@ const NewCard = ({ item }) => {
             />
             <CardContent>
             {item.discount ?
-                <div style={{marginBottom:"10px"}}><span style={{marginRight:"8px"}} className='price-discount'>{item.price} p</span><span className='discount'>{discount} p</span></div> :  
-                <Typography className='hit-price' variant="body2" color="text.secondary"><p className='discount'>{item.price} p</p>
+                <div style={{marginBottom:"10px"}}><span style={{marginRight:"8px"}} className='price-discount'>{item.price.toLocaleString().replace(',', ' ')} p</span><span className='discount'>{discount.toLocaleString().replace(',', ' ')} p</span></div> :  
+                <Typography className='hit-price' variant="body2" color="text.secondary"><span className='discount'>{item.price.toLocaleString().replace(',', ' ')} p</span>
                 </Typography>
             }  
             <Typography sx={{fontSize:"14px", fontWeight: "500", color: "#393939", marign:"8px 0 6px 0", fontFamily: "'Montserrat', sans-serif"}} gutterBottom variant="h5" component="div">

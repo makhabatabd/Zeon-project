@@ -5,7 +5,8 @@
 .main-div {
     background-color: #ECECEC;
     color: #393939;
-    padding: 11px 0 100px 0;
+    padding: 11px 0 80px 0;
+    position: relative;
 }
 
 .cart-inner {
@@ -92,7 +93,7 @@ input#number {
 }
 
 .payment-button {
-    width: 336px;
+    width: 388px;
     height: 44px;
     border: none;
     outline: none;
@@ -100,6 +101,7 @@ input#number {
     color: white;
     font-weight: 500;
     font-size: 14px;
+    margin-top: 10px;
 }
 
 .cart-payment-inner p {
@@ -131,12 +133,26 @@ input#number {
 .cart-payment-inner {
     background-color: white;
     width: 384px;
-    height: 300px;
+    height: 270px;
+}
+
+.hr {
+    width: 336px;
+    border: 1px dashed #BFBFBF;
+    margin: 12px 0;
+}
+
+.main-cart-div {
+    padding-bottom: 130px;
 }
 
 @media screen and (max-width: 321px) {
     .main-cart-div {
         flex-direction: column;
+    }
+
+    .main-div {
+        padding: 11px 0 30px 0;
     }
 
     .cart-inner {
@@ -151,14 +167,12 @@ input#number {
     .payment-total-info {
         background-color: white;
         width: 290px;
-        height: 160px;
+        height: 146px;
     }
 
     .cart-delete {
-        width: 8px;
-        height: 8px;
-        top: -3%;
-        right: 9%;
+        top: 0%;
+        right: 0%;
     }
 
     .mini-payment-inner {
@@ -170,13 +184,13 @@ input#number {
     .cart-payment {
         width: 320px;
         position: fixed;
-        top: 10%;
+        top: 36%;
         left: 0%;
     }
 
     .payment-button {
         width: 288px;
-        margin: 0 16px 18px;
+        margin: 0 0px 18px 0;
     }
 
     .mini-payment {
@@ -184,7 +198,7 @@ input#number {
     }
 
     .mini-payment-inner {
-        height: 317px;
+        height: 288px;
         background-color: white;
     }
 
@@ -213,7 +227,7 @@ input#number {
         font-size: 13px;
         margin: 0 auto;
         background-color: white;
-        margin: 0 16px 16px;
+        margin: 0 0px 16px 0;
     }
 
     .payment-total-info span {
@@ -231,8 +245,18 @@ input#number {
 
     .payment-total-info {
         padding: 18px 16px;
-        display: flex;
-        justify-content: space-between;
+    }
+
+    .payment-total-info span {
+        margin-right: 78px;
+    }
+
+    .payment-total-info p {
+        margin-bottom: 16px;
+    }
+
+    .hr {
+        width: 290px;
     }
 
 }
