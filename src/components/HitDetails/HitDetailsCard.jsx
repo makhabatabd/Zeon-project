@@ -43,9 +43,7 @@ const HitDetailsCard = ({item, id, colors}) => {
                         <span>Хит продаж</span>
                         </Link>
                         <span>/</span>
-                    <Link style={{textDecoration: 'none'}} to={`/details/${item.id}`}>
                         <span className='item-title'>{item.title}</span>
-                        </Link>
                     </span>
                  </div>
             </div>

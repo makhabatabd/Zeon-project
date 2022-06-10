@@ -1,15 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
 import "./Favorite.css";
 import { favoriteContext } from "../../context/favoriteContext";
-import { CardActionArea } from "@mui/material";
-import FavoriteIcon from "@mui/icons-material/Favorite";
 import axios from "axios";
 import Random from "../Random/Random";
-import Color from "../Colors/Color";
 import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
@@ -17,6 +10,7 @@ import TableRow from '@mui/material/TableRow';
 import Table from '@mui/material/Table';
 import Paper from '@mui/material/Paper';
 import { useNavigate } from "react-router-dom";
+import FavoriteCard from "./FavoriteCard";
 
 const Favorite = () => {
     const { fav, getFav, deleteProdInFav, favoriteLength } = useContext(favoriteContext)
@@ -54,9 +48,7 @@ const Favorite = () => {
             }
         } else {
             e.target.documentElement.scrollHeight - (e.target.documentElement.scrollTop + window.innerHeight) < 100 && changeLimit(12)
-        }
-    
-        
+        } 
     } 
  
   useEffect(() => { 
@@ -66,6 +58,7 @@ const Favorite = () => {
       document.removeEventListener('scroll', ScrollHandler) 
     } 
   }, [])
+    
     
      useEffect(() => {
       axios.get(`http://localhost:8000/summer?_limit=2`)
@@ -104,41 +97,9 @@ const Favorite = () => {
                                 {fav.products
                                     .filter((i, k)=> k < limit)
                                     .map((item1) => (
-                                <Card key={item1.item.id} square={true}>
-                                    <CardActionArea>
-                                        <FavoriteIcon
-                                            className='favorite'
-                                            style={{ color: "red", position: "absolute", top: "2%", right: "5%"}}
-                                            onClick={() => {
-                                               deleteProdInFav(item1.item.id)
-                                            }}
-                                        />
-                                        <CardMedia
-                                            className="photos"
-                                            height="140"
-                                            component="img"
-                                            image={item1.item.img}
-                                            alt="fav image"
-                                            onClick={() => navigate(`/details/56`)}
-                                        />
-                                        <CardContent>
-                                             <Typography gutterBottom variant="h5" component="div">
-                                                {item1.item.title}
-                                            </Typography>
-                                            {item1.item.discount ?
-                                                <div><span className='discount'>{Math.ceil(item1.item.price - (item1.item.price * item1.item.discount / 100)).toLocaleString().replace(',', ' ')} p</span><span className='price-discount'>{item1.item.price.toLocaleString().replace(',', ' ')} p</span></div> :  
-                                                <Typography className='hit-price' variant="body2" color="text.secondary"><span className='discount'>{item1.item.price.toLocaleString().replace(',', ' ')} p</span>
-                                                </Typography>
-                                            }   
-                                            <Typography variant="body2" color="text.secondary">
-                                                Размер : {item1.item.size}
-                                            </Typography>
-                                            <Color/>
-                                        </CardContent>
-                                    </CardActionArea>
-                                </Card>
-                            ))}
-                        </div>
+                                        <FavoriteCard item1={item1} deleteProdInFav={deleteProdInFav} key={item1.item.id}/>
+                                    ))}
+                                </div>
                         </>
                     ) : (
                             <>

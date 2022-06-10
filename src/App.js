@@ -27,9 +27,9 @@ import Order from "./components/Order/Order";
 import "react-phone-number-input/style.css";
 import ScrollTop from "./components/ScrollTop/ScrollTop";
 import AllContextProvider from "./context/AllContext";
-import Search from "./components/Search/Search";
-import Slider from "./components/Slider/Slider";
 import SearchPage from "./components/SearchPage/SearchPage";
+import "react-alice-carousel/lib/alice-carousel.css";
+import Search from "./components/Search/Search";
 
 const theme = createTheme({
   palette: {

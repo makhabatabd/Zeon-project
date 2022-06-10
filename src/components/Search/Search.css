@@ -79,3 +79,68 @@ input:focus {
     text-decoration: none;
     border-bottom: 1px solid #EEEEEE;
 }
+
+
+.small-search {
+    display: none;
+    position: relative;
+}
+
+.small-search-inputs input {
+    width: 280px;
+    height: 44px;
+    border: 0;
+    background-color: #F8F8F8;
+    padding-left: 10px;
+    position: absolute;
+    z-index: 5;
+    top: 64px;
+    right: -1px;
+}
+
+.small-search-icon {
+    width: 30px;
+    background-color: #F8F8F8;
+    display: grid;
+    place-items: center;
+    height: 46px;
+    z-index: 5;
+    position: absolute;
+    top: 64px;
+    right: 10px;
+}
+
+
+
+
+@media screen and (max-width: 320px) {
+    .small-search {
+        display: block;
+    }
+
+    .search {
+        display: none;
+    }
+
+    .data-result-outter {
+        width: 292px;
+        height: 306px;
+        position: absolute;
+        top: 81px;
+        left: 12px;
+        z-index: 4;
+        border: 1px solid #D3D3D3;
+        background-color: white;
+    }
+
+    .data-result {
+        width: 242px;
+        height: 240px;
+        background-color: white;
+        overflow: hidden;
+        overflow-y: auto;
+        margin-top: 50px;
+        padding: 0px 20px 0px 20px;
+    }
+
+}

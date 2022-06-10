@@ -39,59 +39,66 @@ const SearchPageCard = ({ item }) => {
             setHover("hover-4")
              }
     }
+    const handleDetails = () => {
+            if (item.type == "summer") {
+                navigate(`/details/${item.id}`)
+            } else if (item.type == "hit") {
+                 navigate(`/hitdetails/${item.id}`)
+            } else if (item.type == "brandnew") {
+                navigate(`/newdetails/${item.id}`)
+            }
+        }
     const handleLeave = () => {
         setPic(item.img)
         setHover("hover")
     }
     return (
             <Card square={true} onMouseMove = {(e) => handleMouse(e)} onMouseLeave={()=>handleLeave()}> 
-            <CardActionArea>
-                 {inFav ? (
-                <FavoriteIcon
-                className='favorite'
-                style={{ color: "red" }}
-                onClick={() => {
-                  addDelToFav(item);
-                  setInFav(isProdInFav(item.id));
-                }}
-              />
-            ) : (
-                <FavoriteBorderIcon
-                style={{ color: "white", width:"24px" }}
-                className='favorite-hover'
-                onClick={() => {
-                  addDelToFav(item);
-                  setInFav(isProdInFav(item.id));
-                }}
-              />
-                )}
-            {item.discount ? <div className='red-discount'><span>{item.discount}%</span></div>: null}
-            <Link to={`/hitdetails/${item.id}`}>
-                    <CardMedia
-                        onClick={()=>navigate(`/details/{item.id}`)}
-                    component="img"
-                    height="140"
-                    image={pic}
-                    alt="hits image"
+                <CardActionArea>
+                    {inFav ? (
+                    <FavoriteIcon
+                    className='favorite'
+                    style={{ color: "red" }}
+                    onClick={() => {
+                    addDelToFav(item);
+                    setInFav(isProdInFav(item.id));
+                    }}
                 />
-                </Link>
-                <div className={hover}></div>
-            <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-                {item.title}
-            </Typography>
-            {item.discount ?
-                <div><span className='discount'>{discount.toLocaleString().replace(',', ' ')} p</span><span className='price-discount'>{item.price.toLocaleString().replace(',', ' ')} p</span></div> :  
-                <Typography className='hit-price' variant="body2" color="text.secondary"><span className='discount'>{item.price.toLocaleString().replace(',', ' ')} p</span>
+                ) : (
+                    <FavoriteBorderIcon
+                    style={{ color: "white", width:"24px" }}
+                    className='favorite-hover'
+                    onClick={() => {
+                    addDelToFav(item);
+                    setInFav(isProdInFav(item.id));
+                    }}
+                />
+                    )}
+                {item.discount ? <div className='red-discount'><span>{item.discount}%</span></div>: null}
+                        <CardMedia
+                        onClick={handleDetails}
+                        component="img"
+                        height="140"
+                        image={pic}
+                        alt="hits image"
+                    />
+                    <div className={hover}></div>
+                <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                    {item.title}
                 </Typography>
-            }   
-            <Typography variant="body2" color="text.secondary">
-                Размер : {item.size}
-            </Typography>
-            <Color/>
-            </CardContent>
-            </CardActionArea>
-                </Card>
+                {item.discount ?
+                    <div><span className='discount'>{discount.toLocaleString().replace(',', ' ')} p</span><span className='price-discount'>{item.price.toLocaleString().replace(',', ' ')} p</span></div> :  
+                    <Typography className='hit-price' variant="body2" color="text.secondary"><span className='discount'>{item.price.toLocaleString().replace(',', ' ')} p</span>
+                    </Typography>
+                }   
+                <Typography variant="body2" color="text.secondary">
+                    Размер : {item.size}
+                </Typography>
+                <Color/>
+                </CardContent>
+                </CardActionArea>
+            </Card>
     );
 };
 

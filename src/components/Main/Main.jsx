@@ -120,8 +120,8 @@ const Main = () => {
             {
                 open ?
                 <div style={{ position: "fixed", top: "70%", left: "82%", m: 0, background: "transparent", zIndex: "3" }}>
-                    <span className='main-icons' href=""><img src={require('../../images/telegram (1).png')} alt="telegram" /></span>
-                    <span className='main-icons' href=""><img src={require('../../images/whatsapp.png')} alt="wa" /></span>
+                    <a className='main-icons' target="_blank" href="https://web.telegram.org/"><img src={require('../../images/telegram (1).png')} alt="telegram" /></a>
+                    <a className='main-icons' target="_blank" href="https://web.whatsapp.com/"><img src={require('../../images/whatsapp.png')} alt="wa" /></a>
                     <span className='main-icons' href=""><img onClick={()=>setOpenDialog(true)}  src={require('../../images/telephone.png')} alt="phone" /></span>
                     </div> : null} 
                 <Slider/>

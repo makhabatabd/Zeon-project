@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { useLocation, useParams } from 'react-router-dom';
+import { Link, useLocation, useParams } from 'react-router-dom';
 import { allContext } from '../../context/AllContext';
 import SearchPageCard from './SearchPageCard';
 import "./SearchPage.css"
@@ -78,7 +78,19 @@ const SearchPage = () => {
          })
     }, [])
     
-    return (
+  return (
+      <>
+      <div className='breadcrumps'>
+                <div className='container'>
+                <span className='breadcrumps-span'>
+                    <Link style={{textDecoration: 'none'}} to={'/'}>
+                        <span>Главная</span>
+                        </Link>
+                        <span>/</span>
+                        <span className='item-title'>Результаты поиска</span>
+                    </span>
+                 </div>
+        </div>
         <div className='search-page'>
             {paginateData.length > 0 ? (
             <div className='container'>
@@ -126,7 +138,8 @@ const SearchPage = () => {
                                         </TableContainer>
                                 </div>
                     </div>)}
-        </div>
+          </div>
+         </>
                                 
     );
 };

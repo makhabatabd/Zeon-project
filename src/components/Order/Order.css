@@ -121,7 +121,7 @@ input[type="email"]:invalid~label {
 }
 
 .active-button {
-    width: 417px;
+    width: 430px;
     height: 44px;
     background: #1D1D1B;
     border: none;

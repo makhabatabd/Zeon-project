@@ -8,7 +8,7 @@ const Slider = () => {
         <div className='slider'>
             <div className='container-slider'>
                 <div className='slider-div'>
-                <AliceCarousel autoPlay={true}  autoPlayInterval="3000" autoPlayStrategy='none' infinite="true" disableButtonsControls={true} >
+                <AliceCarousel autoPlay={true} autoPlayInterval={5000}  infinite={true}disableButtonsControls={true} >
                 <div className='slider-main-div'>
                     <div className='slider-left'>
                         <h1>Lorem</h1>
@@ -51,7 +51,7 @@ const Slider = () => {
                         <h3>for all</h3>
                     </div>
                 </div>
-                </AliceCarousel>
+                    </AliceCarousel>
                 </div>
             </div>
         </div>

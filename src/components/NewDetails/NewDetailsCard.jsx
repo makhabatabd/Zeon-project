@@ -43,9 +43,7 @@ const NewDetailsCard = ({item, id, colors}) => {
                         <span>Новинки</span>
                         </Link>
                         <span>/</span>
-                    <Link style={{textDecoration: 'none'}} to={`/details/${item.id}`}>
                         <span className='item-title'>{item.title}</span>
-                        </Link>
                     </span>
                  </div>
             </div>
@@ -135,8 +133,7 @@ const NewDetailsCard = ({item, id, colors}) => {
                                 </div>
                                 <div style={{ backgroundColor: "black"}}>
                                     {inFav ? (
-                                            <FavoriteIcon
-                                                className='favorite'
+                                        <FavoriteIcon
                                             style={{ color: "red", padding:"10px", width:"30px", height:"37px" }}
                                             onClick={() => {
                                                 addDelToFav(item);
@@ -144,8 +141,7 @@ const NewDetailsCard = ({item, id, colors}) => {
                                             }}
                                         />
                                     ) : (
-                                                <FavoriteBorderIcon
-                                                    className='favorite-hover'
+                                        <FavoriteBorderIcon
                                             style={{ color: "white", padding:"10px", width:"30px", height:"37px" }}
                                             onClick={() => {
                                                 addDelToFav(item);

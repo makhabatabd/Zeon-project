@@ -76,12 +76,12 @@ const Header = () => {
                                         <img width="162px" src={item.logo} alt="the logo" />
                                 </div>
                                 </Link>
-                                <div className='xs-search' >
+                                {/* <div className='xs-search' >
                                     <span onClick={()=> setShowInput(v => !v)}>
                                     <SearchOutlinedIcon />
                                     </span>  
                                     {showInput ? <input placeholder='Поиск' type="text" className='input-field' style={{width: "300px",height: "30px", border: "none", border: "0.3px solid #E0E0E0", position:"absolute", top:"10%", left: "10px", marginBottom:"10px"}} /> : null} 
-                                </div>
+                                </div> */}
                                 <Search/>
                             <Hidden xsDown smDown>
                                 <div className='header-extra-info'>

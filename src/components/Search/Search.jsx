@@ -5,11 +5,12 @@ import { allContext } from '../../context/AllContext';
 import SearchIcon from '@mui/icons-material/Search';
 import "./Search.css"
 import { useRef } from 'react';
-import { red } from '@mui/material/colors';
+import CloseIcon from '@mui/icons-material/Close';
 
 
 const Search = () => {
     const { getAllProducts, data } = useContext(allContext)
+    const [showInput, setShowInput] =useState(false)
     useEffect(() => {
         getAllProducts()
     }, [])
@@ -63,6 +64,19 @@ const Search = () => {
                         <SearchIcon onClick={handleNavigate}/>
                     </div>
                 </div>
+            </div>
+            <div className='small-search'>
+                {showInput ? <div onClick={()=>setShowInput(false)}>
+                    <CloseIcon/>
+                </div> : <div onClick={() => setShowInput(true)}>
+                    <SearchIcon/>
+                    </div>}
+                {showInput ? <><div className='small-search-inputs'>
+                    <input onBlur={() => setTimeout(() => setShow(false), 300)} onClick={() => inputHandler()} ref={ref} onChange={handleFilter} placeholder='Поиск' type="text" />
+                    <div className='small-search-icon'>
+                        <SearchIcon onClick={handleNavigate}/>
+                    </div>
+                </div></> : null}
             </div>
             {filteredData.length != 0 && show && (
                 <div className='data-result-outter'>
