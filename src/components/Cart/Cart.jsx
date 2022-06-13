@@ -13,13 +13,12 @@ import Table from '@mui/material/Table';
 import Paper from '@mui/material/Paper';
     
 const Cart = () => {
-    const { getCart, cart, deleteFromCart, changeProductCount, cartLength } = useContext(cartContext);
+    const { getCart, cart, deleteFromCart, changeProductCount} = useContext(cartContext);
     const [open, setOpen] = useState(false)
     const [extraProducts, setExtraProducts] = useState([])
     const [info, setInfo] = useState(false)
     const [button, setButton] = useState(false)
     const total = cart.totalPrice - cart.cartDiscount
-    const disc = cart.cartDiscount * cart.totalCount
   useEffect(() => {
     getCart();
   }, []);
@@ -30,13 +29,7 @@ const Cart = () => {
          })
      }, [])
     useEffect(() => {
-      axios.get(`http://localhost:8000/new?_limit=1`)
-        .then(response => {
-           setExtraProducts(prev => [...prev, ...response.data])
-         })
-    }, [])
-    useEffect(() => {
-      axios.get(`http://localhost:8000/hits?_limit=1`)
+      axios.get(`http://localhost:8000/hits?_limit=2`)
         .then(response => {
            setExtraProducts(prev => [...prev, ...response.data])
          })
@@ -70,11 +63,11 @@ const Cart = () => {
                                                     </div>
                                                 </div>
                                                 <p className='cart-title'>Размер: {item.item.size}</p>
-                                    <p className='cart-price'>{item.item.discount ?
-                                <div><span className='discount'>{Math.ceil(item.item.price - (item.item.price * item.item.discount / 100)).toLocaleString().replace(',', ' ')} p</span><span className='price-discount'>{item.item.price.toLocaleString().replace(',', ' ')} p</span></div> :  <p className='discount'>{item.item.price.toLocaleString().replace(',', ' ')} p</p>} </p>
+                                    <div className='cart-price'>{item.item.discount ?
+                                <div><span className='discount'>{Math.ceil(item.item.price - (item.item.price * item.item.discount / 100)).toLocaleString().replace(',', ' ')} p</span><span className='price-discount'>{item.item.price.toLocaleString().replace(',', ' ')} p</span></div> :  <p className='discount'>{item.item.price.toLocaleString().replace(',', ' ')} p</p>} </div>
                                 <button className='count'
                                     onClick={() =>
-                                    changeProductCount(item.count - 1, item.item.color)
+                                    changeProductCount(item.count - 1, item.item.color, item.item.id)
                                     }
                                 >
                                     -
@@ -87,7 +80,7 @@ const Cart = () => {
                                 />
                                 <button className='count'
                                     onClick={() =>
-                                    changeProductCount(item.count + 1, item.item.color)
+                                    changeProductCount(item.count + 1, item.item.color, item.item.id)
                                     }
                                 >
                                     +
@@ -116,7 +109,7 @@ const Cart = () => {
                                 </div>
                                 <div className='payment-info'> 
                                     <span>Скидка :</span>
-                                    <p>{disc.toLocaleString().replace(',', ' ')} рублей</p>
+                                    <p>{cart.cartDiscount.toLocaleString().replace(',', ' ')} рублей</p>
                                 </div>
                                 <hr className='hr'/>
                                 <div className='payment-info'>
@@ -164,7 +157,7 @@ const Cart = () => {
                                 </div>
                                 <div className='payment-info'> 
                                     <span>Скидка :</span>
-                                    <p>{disc.toLocaleString().replace(',', ' ')} рублей</p>
+                                    <p>{cart.cartDiscount.toLocaleString().replace(',', ' ')} рублей</p>
                                 </div>
                                 <hr style={{ width: "387px", border: "dashed 1px #BFBFBF", margin:"12px 0 12px 0" }} />
                                 <div className='payment-info'>
@@ -174,7 +167,7 @@ const Cart = () => {
                                 <button onClick={() => {
                                     setOpen(true)
                                 }} className='payment-button'>Оформить заказ</button>
-                                <Order open={open} setOpen={setOpen}/>
+                                <Order open={open} setOpen={setOpen} />
                             </div>
                         </div>
                     </div>)  :  <>

@@ -8,11 +8,13 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import { favoriteContext } from '../../context/favoriteContext';
 import Color from '../Colors/Color';
+import { useNavigate } from 'react-router-dom';
 
 const NewCard = ({ item }) => {
     const { addDelToFav, isProdInFav } = useContext(favoriteContext)
     const [inFav, setInFav] = useState(isProdInFav(item.id))
     const discount = Math.ceil(item.price - (item.price * item.discount / 100))
+    const navigate = useNavigate()
     return (
         <Card sx={{width:"226px", height: "430px", marginRight: "8px", border:"none", backgroundColor:"transparent", color:"rgba(0, 0, 0, 0)", boxShadow:"none"}} key={item.id} square={true}>
             <CardActionArea>
@@ -40,7 +42,8 @@ const NewCard = ({ item }) => {
                     sx={{height:"332px"}}
                 component="img"
                 image={item.img}
-                alt="image"
+                    alt="image"
+                    onClick={()=>navigate(`/newd/${item.id}`)}
             />
             <CardContent>
             {item.discount ?

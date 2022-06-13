@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import "./Order.css"
@@ -8,13 +8,15 @@ import CloseIcon from '@mui/icons-material/Close';
 import { useContext } from 'react';
 import { summerContext } from '../../context/SummerCollection';
 import { cartContext } from '../../context/CartContext';
-import { useEffect } from 'react';
 
 const Order = ({open, setOpen}) => {
     const { addOrder } = useContext(summerContext)
-    const {deleteAll, getCart, cart} = useContext(cartContext)
+    const { deleteAll, getCart, cartLength, cart } = useContext(cartContext)
     const [phone, setPhone] = useState("")
     const [success, setSuccess] = useState(false)
+
+    const total = cart.totalPrice - cart.cartDiscount
+    const shop = cart.products
     const navigate = useNavigate()
     const [error, setError] = useState(false);
     const [data, setData] = useState({
@@ -25,17 +27,17 @@ const Order = ({open, setOpen}) => {
         city: "", 
         phone: ""
     })
+    
     const [checked, setChecked] = useState(false)
     const [button, setButton] = useState(false)
-    useEffect(() => {
-        getCart()
-    },[cart])
 
     const handleInputChange = (e) => {
         let newOrder = {
             ...data, 
             [e.target.name]: e.target.value, 
-            phone
+            phone, 
+            total, 
+            shop
         }
         if (
             !data.name || 

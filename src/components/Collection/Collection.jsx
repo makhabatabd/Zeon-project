@@ -63,7 +63,10 @@ const Collection = () => {
             _page: page,
     });
     }
-    }, [page]);
+       }, [page]);
+   useEffect(() => {
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+}, [page])
     return (
         <div style={{backgroundColor: "#ECECEC"}}>
             <div className='container'>

@@ -42,7 +42,6 @@ const Search = () => {
     };
     
     const handleNavigate = (e) => {
-        e.preventDefault()
         navigate(`/searchpage/${searchValue}`)
         clearInput()
         ref.current.value = ""
@@ -55,11 +54,17 @@ const Search = () => {
         }
     }
 
+    const keyHandler = (e) => {
+        if (e.key === "Enter") {
+            handleNavigate()
+        }
+    }
+
     return (
         <div>
             <div className='search'>
                 <div className='search-inputs'>
-                    <input onBlur={() => setTimeout(() => setShow(false), 300)} onClick={() => inputHandler()} ref={ref} onChange={handleFilter} placeholder='Поиск' type="text" />
+                    <input onBlur={() => setTimeout(() => setShow(false), 300)} onKeyDown={(e)=>keyHandler(e)} onClick={() => inputHandler()} ref={ref} onChange={handleFilter} placeholder='Поиск' type="text" />
                     <div className='search-icon'>
                         <SearchIcon onClick={handleNavigate}/>
                     </div>
@@ -72,7 +77,7 @@ const Search = () => {
                     <SearchIcon/>
                     </div>}
                 {showInput ? <><div className='small-search-inputs'>
-                    <input onBlur={() => setTimeout(() => setShow(false), 300)} onClick={() => inputHandler()} ref={ref} onChange={handleFilter} placeholder='Поиск' type="text" />
+                    <input onKeyDown={(e)=>keyHandler(e)} onBlur={() => setTimeout(() => setShow(false), 300)} onClick={() => inputHandler()} ref={ref} onChange={handleFilter} placeholder='Поиск' type="text" />
                     <div className='small-search-icon'>
                         <SearchIcon onClick={handleNavigate}/>
                     </div>
@@ -82,7 +87,7 @@ const Search = () => {
                 <div className='data-result-outter'>
                 <div className="data-result">
                     {filteredData.map((value, key) => (
-                        <Link onClick={()=>ref.current.value =""} className='data-item' to={`/searchpage/${value.title}`} >
+                        <Link key={value.id} onClick={()=>ref.current.value =""} className='data-item' to={`/searchpage/${value.title}`} >
                             {value.title}
                         </Link>
                     ))}

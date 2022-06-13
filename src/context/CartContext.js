@@ -4,6 +4,7 @@ import {
   calcSubPrice,
   calcDiscount,
   totalCount,
+  calcDisc,
 } from "../components/helpers/calcPrice";
 
 export const cartContext = React.createContext();
@@ -47,7 +48,6 @@ const CartContextProvider = ({ children }) => {
     });
   }
   function addProductToCart(product) {
-    console.log("product", product);
     let cart = JSON.parse(localStorage.getItem("cart"));
     if (!cart) {
       cart = {
@@ -59,7 +59,10 @@ const CartContextProvider = ({ children }) => {
     let newProduct = {
       item: product,
       subPrice: product.price,
-      discount: product.discount,
+      discount: Math.ceil(
+        product.price -
+          (product.price - (product.price * product.discount) / 100)
+      ),
       count: 1,
     };
     let isProductInCart = cart.products.some(
@@ -109,16 +112,16 @@ const CartContextProvider = ({ children }) => {
     localStorage.setItem("cart", JSON.stringify(cart));
     getCart();
   }
-  function changeProductCount(count, color) {
+  function changeProductCount(count, color, id) {
     if (count <= 0) {
       count = 1;
     }
     let cart = JSON.parse(localStorage.getItem("cart"));
     cart.products = cart.products.map((item) => {
-      if (item.item.color == color) {
+      if (item.item.color === color && item.item.id === id) {
         item.count = count;
+        item.discount = calcDisc(item);
         item.subPrice = calcSubPrice(item);
-        item.discount = calcDiscount(cart.products);
       }
       return item;
     });

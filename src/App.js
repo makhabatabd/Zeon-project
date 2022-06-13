@@ -29,7 +29,7 @@ import ScrollTop from "./components/ScrollTop/ScrollTop";
 import AllContextProvider from "./context/AllContext";
 import SearchPage from "./components/SearchPage/SearchPage";
 import "react-alice-carousel/lib/alice-carousel.css";
-import Search from "./components/Search/Search";
+import NewD from "./components/NewD/NewD";
 
 const theme = createTheme({
   palette: {
@@ -65,6 +65,7 @@ const App = () => {
                             path="/hitdetails/:id"
                             element={<HitDetails />}
                           />
+                          <Route path="/newd/:id" element={<NewD />} />
                           <Route
                             path="/newdetails/:id"
                             element={<NewDetails />}

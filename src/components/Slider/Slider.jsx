@@ -1,15 +1,24 @@
 import React from 'react';
-import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css"
+import { useNavigate } from 'react-router-dom';
 import "./Slider.css"
-
+import SliderComponent from "react-slick"
 const Slider = () => {
+    const navigate = useNavigate()
+    const settings = {
+    dots: true,
+      infinite: true,
+      speed: 700,
+      slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false, 
+    autoplay: true, 
+      easing: true
+    }
     return (
-        <div className='slider'>
-            <div className='container-slider'>
-                <div className='slider-div'>
-                <AliceCarousel autoPlay={true} autoPlayInterval={5000}  infinite={true}disableButtonsControls={true} >
-                <div className='slider-main-div'>
+                <div className='container-slider'>
+                <SliderComponent className='slider' {...settings} >
+                 <div className='slider-main-div' onClick={()=> navigate("/summer")}>
                     <div className='slider-left'>
                         <h1>Lorem</h1>
                         <h2>ipsum</h2>
@@ -23,7 +32,7 @@ const Slider = () => {
                         <h4>for all</h4>
                     </div>
                 </div>
-                <div className='slider-main-div'>
+                 <div className='slider-main-div'>
                     <div className='slider-left'>
                         <h1>Lorem</h1>
                         <h2>ipsum</h2>
@@ -33,28 +42,27 @@ const Slider = () => {
                     <img className='img' src="https://cdn.discordapp.com/attachments/981039569258557442/981408439408418866/unknown.png" alt="slider image" />
                     <div className='slider-right'>
                         <h3>Sale</h3>
-                        <p>60%</p>
-                        <h3>for all</h3>
+                        <p>30%</p>
+                        <h4>for all</h4>
                     </div>
                 </div>
-                <div className='slider-main-div'>
+                 <div className='slider-main-div'>
                     <div className='slider-left'>
                         <h1>Lorem</h1>
                         <h2>ipsum</h2>
                         <p>Lorem Lorem</p>
                         <p>Ipsum Ipsum</p>
-                     </div>
+                    </div>
                     <img className='img' src="https://cdn.discordapp.com/attachments/981039569258557442/981408844779515934/unknown.png" alt="slider image" />
                     <div className='slider-right'>
                         <h3>Sale</h3>
-                        <p>50%</p>
-                        <h3>for all</h3>
+                        <p>30%</p>
+                        <h4>for all</h4>
                     </div>
                 </div>
-                    </AliceCarousel>
-                </div>
+            </SliderComponent>
             </div>
-        </div>
     );
 };
 export default Slider;
+

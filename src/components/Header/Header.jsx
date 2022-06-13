@@ -20,7 +20,6 @@ import Search from '../Search/Search';
 const Header = () => {
     const { getHeader, header } = useContext(headerContext)
     const [open, setOpen] = useState(false);
-    const [showInput, setShowInput] = useState(false)
     const { getFav, favoriteLength } = useContext(favoriteContext)
     const { getCart, cartLength } = useContext(cartContext)
     const [openDialog, setOpenDialog] = useState(false)
@@ -37,6 +36,7 @@ const Header = () => {
     useEffect(() => {
         getCart()
     }, [])
+
     return (
         <div>
             {header.map((item) => (
@@ -76,12 +76,6 @@ const Header = () => {
                                         <img width="162px" src={item.logo} alt="the logo" />
                                 </div>
                                 </Link>
-                                {/* <div className='xs-search' >
-                                    <span onClick={()=> setShowInput(v => !v)}>
-                                    <SearchOutlinedIcon />
-                                    </span>  
-                                    {showInput ? <input placeholder='Поиск' type="text" className='input-field' style={{width: "300px",height: "30px", border: "none", border: "0.3px solid #E0E0E0", position:"absolute", top:"10%", left: "10px", marginBottom:"10px"}} /> : null} 
-                                </div> */}
                                 <Search/>
                             <Hidden xsDown smDown>
                                 <div className='header-extra-info'>
@@ -133,22 +127,25 @@ const Header = () => {
                                             <Link style={{textDecoration: 'none', color:"#393939"}} to={'/about'}>
                                             <p style={{fontWeight: "500", fontSize: "13px", margin: "0 0 20px 0"}}>О нас</p>
                                         </Link>
-                                            <Link style={{textDecoration: 'none', color:"#393939"}} to={'/collection'}>
-                                            <p style={{ fontWeight: "500", fontSize: "13px", margin: "0 0 20px 0" }}>Коллекции</p>
-                                            </Link>
                                             <Link style={{textDecoration: 'none', color:"#393939"}} to={'/news'}>
                                             <p style={{fontWeight: "500", fontSize: "13px", margin: "0 0 20px 0"}}>Новости</p>
-                                            </Link>
+                                        </Link>
+                                        <Link style={{textDecoration: 'none', color:"#393939"}} to={'/collection'}>
+                                            <p style={{ fontWeight: "500", fontSize: "13px", margin: "0 0 20px 0" }}>Коллекции</p>
+                                        </Link>
+                                        <hr  style={{width:"100px", opacity:"0.6", border: "1px solid #D3D3D3", margin: "14px 0 14px 0"}}/>
                                         </div>
                                 </div>
                                     <div>
-                                        <div onClick={()=>navigate("/favorite")} style={{ display: "flex", alignItems: "center" }}>
-                                                <img style={{marginRight: "6px"}} width="16px" src={require('../../images/heart-icon.png')} alt="the heart" />
-                                                <p style={{fontWeight: "500", fontSize: "13px"}}>Избранное</p>
+                                    <div onClick={() => navigate("/favorite")} style={{ display: "flex", alignItems: "center" }}>
+                                                {favoriteLength > 0 ? <Badge sx={{marginRight: "7px"}} badgeContent=" " variant="dot" color='secondary' overlap="circular">
+                                                    <FavoriteBorderIcon sx={{ color: "#515151", width: "20px", marginRight: "-1px", marginTop: "-3px" }} />
+                                        </Badge> : <FavoriteBorderIcon sx={{ color: "#515151", width:"20px", marginRight:"7px" }} />}
+                                        <p style={{fontWeight: "500", fontSize: "13px"}}>Избранное</p>
                                         </div>
                                         <div onClick={()=>navigate("/cart")} style={{ display: "flex", alignItems: "center" }}>
-                                                <img style={{marginRight: "6px"}} width="16px" src={require('../../images/heart-icon.png')} alt="the heart" />
-                                                <p style={{fontWeight: "500", fontSize: "13px"}}>Корзина</p>
+                                        {cartLength > 0 ? <Badge sx={{marginRight: "7px"}} badgeContent=" " variant="dot" color='secondary' overlap="circular"><img style={{width: "20px", marginRight: "-1px", marginTop: "-3px"}} src={require('../../images/shopping-bag 1.png')} alt="cart" /></Badge> : <img style={{width:"20px", marginRight:"7px"}} src={require('../../images/shopping-bag 1.png')} alt="cart" />}
+                                        <p style={{fontWeight: "500", fontSize: "13px"}}>Корзина</p>
                                         </div >
                                     </div>
                             </div>

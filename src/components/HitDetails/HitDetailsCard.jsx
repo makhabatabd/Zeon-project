@@ -109,7 +109,7 @@ const HitDetailsCard = ({item, id, colors}) => {
                         <div className='details-bottom'> 
                             <div className='details-info-bottom'>
                                     <p><span>Размерный ряд: </span>{item.size}</p>
-                                    <p><span>Количество в линейки:</span>{item.amount}</p>
+                                    <p><span>Количество в линейки: </span>{item.amount}</p>
                             </div>
                             <div className='details-info-bot'>
                                 <p><span>Состав ткани: </span>{item.made}</p>
@@ -134,7 +134,7 @@ const HitDetailsCard = ({item, id, colors}) => {
                                 <div style={{ backgroundColor: "black"}}>
                                     {inFav ? (
                                         <FavoriteIcon
-                                            style={{ color: "red", padding:"10px", width:"30px", height:"37px" }}
+                                            style={{ color: "white", padding:"10px", width:"30px", height:"37px" }}
                                             onClick={() => {
                                                 addDelToFav(item);
                                                 setInFav(isProdInFav(item.id));

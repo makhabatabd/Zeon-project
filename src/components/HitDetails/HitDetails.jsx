@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Hits from '../Hits/Hits';
 import Similiar from '../Similar/Similiar';
 import HitDetailsCard from './HitDetailsCard';
 

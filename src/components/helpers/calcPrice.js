@@ -4,7 +4,7 @@ export function calcTotalPrice(products) {
     return totalPrice;
   } else {
     products.forEach((item) => {
-      totalPrice += +item.subPrice * 5;
+      totalPrice += +item.subPrice;
     });
     return totalPrice;
   }
@@ -12,6 +12,19 @@ export function calcTotalPrice(products) {
 
 export function calcSubPrice(product) {
   return +product.count * +product.item.price;
+}
+
+export function calcDisc(product) {
+  if (product.discount) {
+    return (
+      +product.count *
+      Math.ceil(
+        product.item.price -
+          (product.item.price -
+            (product.item.price * product.item.discount) / 100)
+      )
+    );
+  }
 }
 
 export function calcDiscount(products) {
@@ -22,12 +35,8 @@ export function calcDiscount(products) {
     products.forEach((item) => {
       {
         item.item.discount
-          ? (cartDiscount +=
-              (item.item.price -
-                (item.item.price -
-                  (item.item.price * item.item.discount) / 100)) *
-              5)
-          : (cartDiscount = 0);
+          ? (cartDiscount += item.discount)
+          : (cartDiscount += 0);
       }
     });
     return cartDiscount;

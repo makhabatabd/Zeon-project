@@ -16,7 +16,6 @@ const Favorite = () => {
     const { fav, getFav, deleteProdInFav, favoriteLength } = useContext(favoriteContext)
     const [extraProducts, setExtraProducts] = useState([])
     const [limit, setLimit] = useState(0)
-    const navigate = useNavigate()
    
     useEffect(() => {
         if (window.innerWidth < 321) {
@@ -67,13 +66,7 @@ const Favorite = () => {
          })
      }, [])
     useEffect(() => {
-      axios.get(`http://localhost:8000/new?_limit=1`)
-        .then(response => {
-           setExtraProducts(prev => [...prev, ...response.data])
-         })
-    }, [])
-    useEffect(() => {
-      axios.get(`http://localhost:8000/hits?_limit=1`)
+      axios.get(`http://localhost:8000/hits?_limit=2`)
         .then(response => {
            setExtraProducts(prev => [...prev, ...response.data])
          })

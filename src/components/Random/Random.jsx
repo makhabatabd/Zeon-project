@@ -54,6 +54,16 @@ const Random = ({ item }) => {
         boxShadow: "none",
     }
 
+     const handleDetails = () => {
+            if (item.type == "summer") {
+                navigate(`/details/${item.id}`)
+            } else if (item.type == "hit") {
+                 navigate(`/hitdetails/${item.id}`)
+            } else if (item.type == "brandnew") {
+                navigate(`/newdetails/${item.id}`)
+            }
+        }
+
     return (
         <div className='sm-card-outter'>
         <Card className='sm-card' onMouseMove={(e) => handleMouse(e)} onMouseLeave={() => handleLeave()} style={cardStyle} sx={{ height: "430px" }} key={item.id} square={true}>
@@ -76,7 +86,7 @@ const Random = ({ item }) => {
                     }}
                 />)}
                     <CardMedia
-                        onClick={() => navigate(`/details/${item.id}`)}
+                        onClick={handleDetails}
                     sx={{height:"332px"}}
                         className="photos"
                         height="140"

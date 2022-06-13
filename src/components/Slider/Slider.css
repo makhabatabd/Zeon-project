@@ -1,10 +1,60 @@
 .slider {
-    margin-bottom: 44px;
+    cursor: pointer;
+    margin-bottom: 50px;
     padding-top: 11px;
 }
 
+
+.slider .slick-dots {
+    margin-bottom: 0;
+}
+
+.slider .slick-dots li {
+    margin: 3px;
+    width: 8px;
+    height: 8px;
+}
+
+.slider .slick-dots li button {
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid grey;
+}
+
+.slider .slick-dots li button:before {
+    width: 10px;
+    height: 10px;
+    line-height: 10px;
+    top: 0;
+    left: 0;
+    color: transparent;
+}
+
+.slider .slick-active {
+    width: 8px;
+    height: 8px;
+}
+
+.slider .slick-active button {
+    width: 8px;
+    height: 8px;
+}
+
+.slider .slick-dots .slick-active button:before {
+    width: 8px;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    height: 8px;
+    opacity: 1;
+    background-color: #1d1d1b;
+}
+
 .slider-main-div {
-    display: flex;
+    display: flex !important;
     background-color: #E0E0E0;
     justify-content: center;
     align-items: center;
@@ -34,7 +84,7 @@
     font-weight: 400;
     font-size: 56px;
     color: #58646F;
-    margin: 0 0 0 -110px;
+    margin: -10px 0 0 -110px;
 }
 
 .slider-left p {
@@ -73,26 +123,6 @@
     margin-top: 44px;
 }
 
-.alice-carousel__dots-item:not(.__custom):not(:last-child) {
-    margin-right: 6px;
-}
-
-.alice-carousel__dots {
-    margin: 8px 0 0 0;
-}
-
-.alice-carousel__dots-item:not(.__custom):hover,
-.alice-carousel__dots-item:not(.__custom).__active {
-    background-color: #1D1D1B;
-    width: 8px;
-}
-
-.alice-carousel__dots-item:not(.__custom) {
-    background-color: white;
-    border: 1px solid rgba(29, 29, 27, 0.3);
-    width: 8px;
-}
-
 @media screen and (max-width: 320px) {
     .container-slider {
         padding: 0;
@@ -117,16 +147,17 @@
 
     .slider-left h2 {
         font-size: 20px;
-        margin: 0 0 0 -10px;
+        margin: -5px 0 0 -10px;
     }
 
     .slider-left p {
         font-size: 6px;
-        margin: 0 0 0 -5px;
+        margin: 0 0 0 12px;
     }
 
     .slider-right h3 {
         font-size: 15px;
+        margin-left: -5px;
     }
 
     .slider-right p {
@@ -136,5 +167,6 @@
 
     .slider-right h4 {
         font-size: 10px;
+        margin-top: 22px;
     }
 }

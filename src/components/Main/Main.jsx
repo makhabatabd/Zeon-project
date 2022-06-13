@@ -18,6 +18,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Table from '@mui/material/Table';
 import Paper from '@mui/material/Paper';
+import { cartContext } from '../../context/CartContext';
 
 
 const Main = () => {
@@ -40,6 +41,7 @@ const Main = () => {
     const [name, setName] = useState("")
     const [phone, setPhone] = useState("")
     const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+    const { getCart, cartLength } = useContext(cartContext)
 
     useEffect(() => {
     if (fetching) {
@@ -114,6 +116,10 @@ const Main = () => {
     useEffect(() => {
         setScreenWidth(window.innerWidth)
     }, [screenWidth])
+
+     useEffect(() => {
+        getCart()
+      }, [])
 
     return (
         <div className='main'>

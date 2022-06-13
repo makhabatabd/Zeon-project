@@ -52,6 +52,9 @@ const SearchPage = () => {
       setLimit(12)
   }
   }, [])
+useEffect(() => {
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+}, [page])
 
         useEffect(() => {
       axios.get(`http://localhost:8000/summer?_limit=2`)
