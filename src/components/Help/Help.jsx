@@ -1,12 +1,18 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import "./Help.css"
-import HelpCard from "./HelpCard"
 
 
 const Help = () => {
     const [help, setHelp] = useState([])
-    const [image, setImage] = useState([])
+  const [image, setImage] = useState([])
+  const [text, setText] = useState(null);
+  const toggle = (index) => {
+    if (text === index) {
+      return setText(null)
+    }
+    setText(index)
+  }
       useEffect(() => {
       axios.get("http://localhost:8000/help")
         .then(response => {
@@ -30,8 +36,24 @@ const Help = () => {
                     ))}
                     <div className='help-inner-info'>
                         <h3>Помощь</h3>
-                        {help.map((item) => (
-                          <HelpCard item={item} key={item.id}/>
+                        {help.map((item, index) => (
+                           <div className="help-outter-card" key={item.id}>
+                              <div className="help-inner-card" onClick={()=>toggle(index)} >
+                                <h4>{item.title}</h4>
+                                {text === index ? (
+                                  <img
+                                    src={require("../../images/arrow-down.png")}
+                                    alt="arrow down"
+                                  />
+                                ) : (
+                                  <img
+                                    src={require("../../images/arrow-up.png")}
+                                    alt="arrow up"
+                                  />
+                                )}
+                              </div>
+                            <p className={text === index ? "help-extra" : "help-extra-info"}>{item.text}</p> 
+                            </div>
                             ))}
                     </div>
                 </div>

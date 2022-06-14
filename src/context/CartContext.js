@@ -96,6 +96,24 @@ const CartContextProvider = ({ children }) => {
     );
     return isProductInCart;
   }
+
+  const isProdInCart = (id) => {
+    let cart = JSON.parse(localStorage.getItem("cart"));
+    if (!cart) {
+      cart = {
+        products: [],
+        totalPrice: 0,
+        cartDiscount: 0,
+      };
+    }
+
+    let array = [];
+    let exist = cart.products.map((obj) => {
+      return obj.item.id === id && array.push(obj);
+    });
+    return array;
+  };
+
   function deleteFromCart(id, color) {
     let cart = JSON.parse(localStorage.getItem("cart"));
     if (!cart) {
@@ -109,9 +127,12 @@ const CartContextProvider = ({ children }) => {
       (item) => item.item.id === id && item.item.color === color
     );
     cart.products.splice(index, 1);
+
+    cart.totalCount = totalCount(cart.products);
     localStorage.setItem("cart", JSON.stringify(cart));
     getCart();
   }
+
   function changeProductCount(count, color, id) {
     if (count <= 0) {
       count = 1;
@@ -147,6 +168,7 @@ const CartContextProvider = ({ children }) => {
         deleteFromCart,
         changeProductCount,
         deleteAll,
+        isProdInCart,
       }}
     >
       {children}

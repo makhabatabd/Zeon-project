@@ -30,12 +30,15 @@
 }
 
 .help-extra-info {
-    padding: 0px 16px 16px 16px;
+    padding: 0px 16px 0px 16px;
     margin: 0;
     color: #354455;
     font-weight: 300;
     font-size: 14px;
     line-height: 160%;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0, 1, 0, 1);
 }
 
 .help-inner-card {
@@ -55,6 +58,20 @@
 .help-inner-card img {
     margin-right: 21px;
 }
+
+.help-extra {
+    height: auto;
+    padding: 0px 16px 16px 16px;
+    margin: 0;
+    color: #354455;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 160%;
+    max-height: 9999px;
+    transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+
 
 
 @media screen and (max-width: 320px) {

@@ -48,7 +48,7 @@ const FavoriteCard = ({ item1, deleteProdInFav }) => {
                             <Typography variant="body2" color="text.secondary">
                                 Размер : {item1.item.size}
                             </Typography>
-                            <Color/>
+                            <Color id={item1.item.id}/>
                      </CardContent>
                 </CardActionArea>
             </Card>

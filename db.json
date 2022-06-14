@@ -1,13 +1,10 @@
 {
-  "header": [
-    {
-      "logo": "https://cdn.discordapp.com/attachments/979601812472598619/979627292156395580/unknown.png",
-      "number": "+996 000 00 00 00",
-      "id": 1
-    }
-  ],
-  "news": [
-    {
+  "header": [{
+    "logo": "https://cdn.discordapp.com/attachments/979601812472598619/979627292156395580/unknown.png",
+    "number": "+996 000 00 00 00",
+    "id": 1
+  }],
+  "news": [{
       "img": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/94023c109854731.60dec6c8d8a02.jpg",
       "title": "Lorem ipsum dolor sit amet",
       "text": "Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue.Sit ullamcorper at gravida quis feugiat. Laoreet leo dolor, dui eget sit viverra justo, malesuada. Viverra pharetra, augue neque felis enim dui id cum. At pellentesque diam nulla ac amet quisque quis. Est consectetur ullamcorper curabitur quis viverra hac molestie. Elit pulvinar congue ut amet adipiscing felis tincidunt. Amet quis varius aliquam hendrerit tempus. Sed sit diam quis scelerisque congu econgu econgu econguecongu econguecon guecon guecon guecong ueconguecong uec ongue.",
@@ -242,8 +239,7 @@
       "id": 43
     }
   ],
-  "help": [
-    {
+  "help": [{
       "title": "Как я могу заказать одежду?",
       "id": 1,
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit. Ut cras ut rhoncus fermentum pharetra a sit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit."
@@ -279,14 +275,11 @@
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit. Ut cras ut rhoncus fermentum pharetra a sit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet laoreet a, neque, gravida urna libero iaculis lacus. Pellentesque pellentesque massa ornare sit pellentesque elit nulla. Id est tellus maecenas ornare velit."
     }
   ],
-  "image": [
-    {
-      "img": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/94023c109854731.60dec6c8d8a02.jpg",
-      "id": 1
-    }
-  ],
-  "hits": [
-    {
+  "image": [{
+    "img": "https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/94023c109854731.60dec6c8d8a02.jpg",
+    "id": 1
+  }],
+  "hits": [{
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979364513835020328/unknown.png",
       "title": "Вечернее платье",
       "price": 1365,
@@ -565,8 +558,7 @@
       "type": "hit"
     }
   ],
-  "brandnew": [
-    {
+  "brandnew": [{
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979367348249186404/unknown.png",
       "title": "Вечернее платье",
       "price": 1365,
@@ -706,8 +698,7 @@
       "type": "new"
     }
   ],
-  "collection": [
-    {
+  "collection": [{
       "img": "https://cdn.discordapp.com/attachments/979364144170041408/979369314194980924/unknown.png",
       "text": "Повседневная одежда",
       "id": 25
@@ -798,18 +789,15 @@
       "id": 42
     }
   ],
-  "about": [
-    {
-      "img1": "https://cdn.discordapp.com/attachments/979601812472598619/979628102776930354/unknown.png",
-      "img2": "https://cdn.discordapp.com/attachments/979601812472598619/979628196301525012/unknown.png",
-      "img3": "https://cdn.discordapp.com/attachments/979601812472598619/979628306620104744/unknown.png",
-      "title": "О нас",
-      "text": "У нас Вы найдёте всё, что Вам так нужно. Ассортимент магазина постоянно расширяется и дополняется в зависимости от пожеланий клиентов. Женская одежда из наших коллекций – это комфортная, стильная и качественная одежда не только на каждый день, но и для любых ситуаций по доступным ценам.Натуральные материалы, продуманные силуэты, современный дизайн и возможность легкого сочетания моделей помогут Вам всегда оставаться в центре внимания и чувствовать себя уместно в любой ситуации.Если Вы любите одеваться ярко, модно и оригинально, у нас Вы найдете все необходимое, чтобы всегда быть в центре внимания. У нас большая коллекция для любого торжества и праздника, которая сможет удовлетворить вкус самой взыскательной модницы! А для деловых ситуаций, в которых Вам непременно нужно выглядеть элегантно и стильно, мы предлагаем Вам одежду из коллекции 'деловой стиль и офис'. Мода постоянно диктует нам свои требования и для современной девушки, желающей идти в ногу со временем, важно иметь возможность постоянно пополнять свой гардероб стильной одеждой.",
-      "id": 1
-    }
-  ],
-  "pluses": [
-    {
+  "about": [{
+    "img1": "https://cdn.discordapp.com/attachments/979601812472598619/979628102776930354/unknown.png",
+    "img2": "https://cdn.discordapp.com/attachments/979601812472598619/979628196301525012/unknown.png",
+    "img3": "https://cdn.discordapp.com/attachments/979601812472598619/979628306620104744/unknown.png",
+    "title": "О нас",
+    "text": "У нас Вы найдёте всё, что Вам так нужно. Ассортимент магазина постоянно расширяется и дополняется в зависимости от пожеланий клиентов. Женская одежда из наших коллекций – это комфортная, стильная и качественная одежда не только на каждый день, но и для любых ситуаций по доступным ценам.Натуральные материалы, продуманные силуэты, современный дизайн и возможность легкого сочетания моделей помогут Вам всегда оставаться в центре внимания и чувствовать себя уместно в любой ситуации.Если Вы любите одеваться ярко, модно и оригинально, у нас Вы найдете все необходимое, чтобы всегда быть в центре внимания. У нас большая коллекция для любого торжества и праздника, которая сможет удовлетворить вкус самой взыскательной модницы! А для деловых ситуаций, в которых Вам непременно нужно выглядеть элегантно и стильно, мы предлагаем Вам одежду из коллекции 'деловой стиль и офис'. Мода постоянно диктует нам свои требования и для современной девушки, желающей идти в ногу со временем, важно иметь возможность постоянно пополнять свой гардероб стильной одеждой.",
+    "id": 1
+  }],
+  "pluses": [{
       "img": "https://cdn.discordapp.com/attachments/979601812472598619/979668887266271252/unknown.png",
       "title": "Удобные способы оплаты",
       "text": "Мы предлагаем возможность безналичной оплаты",
@@ -834,8 +822,7 @@
       "id": 4
     }
   ],
-  "main-collection": [
-    {
+  "main-collection": [{
       "img": "https://cdn.discordapp.com/attachments/979601812472598619/979704752759783444/unknown.png",
       "title": "Повседневная одежда 2022",
       "id": 43
@@ -896,8 +883,7 @@
       "id": 54
     }
   ],
-  "summer": [
-    {
+  "summer": [{
       "img": "https://cdn.discordapp.com/attachments/979601812472598619/980360810209636362/unknown.png",
       "title": "Вечернее платье",
       "price": 1365,
@@ -1246,8 +1232,7 @@
       "type": "summer"
     }
   ],
-  "new": [
-    {
+  "new": [{
       "img": "https://cdn.discordapp.com/attachments/979601812472598619/982255764292915320/unknown.png",
       "price": 12000,
       "title": "The Organic Cotton Clothes",
@@ -1335,20 +1320,17 @@
       "type": "newD"
     }
   ],
-  "footer": [
-    {
-      "img": "https://cdn.discordapp.com/attachments/979601812472598619/980393534639181894/unknown.png",
-      "phone": "+996 500 123 456",
-      "mail": "mail@gmail.com",
-      "insta": "Instagram",
-      "tel": "Telegram",
-      "wa": "Whatsapp",
-      "text": "Developed by Zeon 2022",
-      "id": 1
-    }
-  ],
-  "order": [
-    {
+  "footer": [{
+    "img": "https://cdn.discordapp.com/attachments/979601812472598619/980393534639181894/unknown.png",
+    "phone": "+996 500 123 456",
+    "mail": "mail@gmail.com",
+    "insta": "Instagram",
+    "tel": "Telegram",
+    "wa": "Whatsapp",
+    "text": "Developed by Zeon 2022",
+    "id": 1
+  }],
+  "order": [{
       "name": "wefwfwe",
       "surname": "ewfwefwf",
       "email": "wefwefwfe@gmail.com",
@@ -1413,8 +1395,7 @@
       "city": "Bishkek",
       "phone": "+996234567890",
       "total": 2730,
-      "shopping": [
-        {
+      "shopping": [{
           "img": "https://cdn.discordapp.com/attachments/979364144170041408/979365676814860288/unknown.png",
           "title": "Пиджак",
           "price": 1365,
@@ -2140,8 +2121,7 @@
       "city": "Bishkek",
       "phone": "+99634567890",
       "total": 2730,
-      "shop": [
-        {
+      "shop": [{
           "item": {
             "img": "https://cdn.discordapp.com/attachments/979364144170041408/979364663668117514/unknown.png",
             "title": "Вечернее платье",
@@ -2194,8 +2174,7 @@
       "city": "Bishkek",
       "phone": "+9964567890",
       "total": 8190,
-      "shop": [
-        {
+      "shop": [{
           "item": {
             "img": "https://cdn.discordapp.com/attachments/979364144170041408/979365676814860288/unknown.png",
             "title": "Пиджак",
@@ -2294,8 +2273,7 @@
       "city": "Bishkek",
       "phone": "+996234567890",
       "total": 5186,
-      "shop": [
-        {
+      "shop": [{
           "item": {
             "img": "https://cdn.discordapp.com/attachments/979364144170041408/979364513835020328/unknown.png",
             "title": "Вечернее платье",
@@ -2364,40 +2342,329 @@
         }
       ],
       "id": 20
+    },
+    {
+      "name": "Makhabat",
+      "surname": "Abdisattarova",
+      "email": "maxabat_98-98mail.ru",
+      "country": "Kyrgyzstan",
+      "city": "Bishkek",
+      "phone": "+9963323",
+      "total": 6688,
+      "shop": [{
+          "item": {
+            "img": "https://cdn.discordapp.com/attachments/979364144170041408/979364663668117514/unknown.png",
+            "title": "Вечернее платье",
+            "price": 1365,
+            "size": "42-50",
+            "id": 2,
+            "text": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
+            "amount": "5",
+            "material": "Полиэстер",
+            "made": "Полиэстер",
+            "artikul": "Платье PL984/dakota",
+            "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
+            "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
+            "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
+            "color": "#73A39D",
+            "type": "hit"
+          },
+          "subPrice": 2730,
+          "count": 2
+        },
+        {
+          "item": {
+            "img": "https://cdn.discordapp.com/attachments/979364144170041408/979364663668117514/unknown.png",
+            "title": "Вечернее платье",
+            "price": 1365,
+            "size": "42-50",
+            "id": 2,
+            "text": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
+            "amount": "5",
+            "material": "Полиэстер",
+            "made": "Полиэстер",
+            "artikul": "Платье PL984/dakota",
+            "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
+            "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
+            "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
+            "color": "#6977F0",
+            "type": "hit"
+          },
+          "subPrice": 2730,
+          "count": 2
+        },
+        {
+          "item": {
+            "img": "https://cdn.discordapp.com/attachments/979364144170041408/979364513835020328/unknown.png",
+            "title": "Вечернее платье",
+            "price": 1365,
+            "size": "42-50",
+            "id": 1,
+            "text": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
+            "amount": "5",
+            "material": "Полиэстер",
+            "made": "Полиэстер",
+            "artikul": "Платье PL984/dakota",
+            "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
+            "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
+            "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
+            "discount": 10,
+            "color": "#73A39D",
+            "type": "hit"
+          },
+          "subPrice": 1365,
+          "discount": 137,
+          "count": 1
+        }
+      ],
+      "id": 21
+    },
+    {
+      "name": "Makhabat",
+      "surname": "Abdisattarova",
+      "email": "maxabat_98-98mail.ru",
+      "country": "Kyrgyzstan",
+      "city": "Bishkek",
+      "phone": "+99633232323",
+      "total": 1365,
+      "shop": [{
+        "item": {
+          "img": "https://cdn.discordapp.com/attachments/979364144170041408/979364663668117514/unknown.png",
+          "title": "Вечернее платье",
+          "price": 1365,
+          "size": "42-50",
+          "id": 2,
+          "text": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
+          "amount": "5",
+          "material": "Полиэстер",
+          "made": "Полиэстер",
+          "artikul": "Платье PL984/dakota",
+          "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
+          "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
+          "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
+          "color": "#73A39D",
+          "type": "hit"
+        },
+        "subPrice": 1365,
+        "discount": null,
+        "count": 1
+      }],
+      "id": 22
+    },
+    {
+      "name": "Makhabat",
+      "surname": "Abdisattarova",
+      "email": "maxabat_98-98mail.ru",
+      "country": "Kyrgyzstan",
+      "city": "Bishkek",
+      "phone": "+996123456789",
+      "total": 2184,
+      "shop": [{
+        "item": {
+          "img": "https://cdn.discordapp.com/attachments/979364144170041408/979365807970734130/unknown.png",
+          "title": "Костюм",
+          "price": 1365,
+          "size": "42-50",
+          "id": 4,
+          "text": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
+          "amount": "5",
+          "material": "Полиэстер",
+          "made": "Полиэстер",
+          "artikul": "Платье PL984/dakota",
+          "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
+          "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
+          "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
+          "discount": 20,
+          "color": "#73A39D",
+          "type": "hit"
+        },
+        "subPrice": 2730,
+        "discount": 546,
+        "count": 2
+      }],
+      "id": 23
+    },
+    {
+      "name": "Makhabat",
+      "surname": "Abdisattarova",
+      "email": "maxabat_98-98mail.ru",
+      "country": "Kyrgyzstan",
+      "city": "Bishkek",
+      "phone": "+996213456789",
+      "total": 5460,
+      "shop": [{
+        "item": {
+          "img": "https://cdn.discordapp.com/attachments/979601812472598619/980361408480948254/unknown.png",
+          "title": "Вечернее платье",
+          "price": 1365,
+          "size": "42-50",
+          "id": 56,
+          "text": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
+          "amount": "5",
+          "material": "Синтетика",
+          "made": "Полиэстер",
+          "artikul": "Платье PL985/dakota",
+          "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
+          "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
+          "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
+          "color": "#84CC4C",
+          "type": "summer"
+        },
+        "subPrice": 5460,
+        "count": 4
+      }],
+      "id": 24
+    },
+    {
+      "name": "Makhabat",
+      "surname": "Abdisattarova",
+      "email": "maxabat_98-98@mail.ru",
+      "country": "Kyrgyzstan",
+      "city": "Bishkek",
+      "phone": "+99654323",
+      "total": 1365,
+      "shop": [{
+        "item": {
+          "img": "https://cdn.discordapp.com/attachments/979364144170041408/979365676814860288/unknown.png",
+          "title": "Пиджак",
+          "price": 1365,
+          "size": "42-50",
+          "id": 3,
+          "text": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
+          "amount": "5",
+          "material": "Полиэстер",
+          "made": "Полиэстер",
+          "artikul": "Платье PL984/dakota",
+          "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
+          "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
+          "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
+          "color": "#73A39D",
+          "type": "hit"
+        },
+        "subPrice": 1365,
+        "discount": null,
+        "count": 1
+      }],
+      "id": 25
+    },
+    {
+      "name": "",
+      "surname": "",
+      "email": "",
+      "country": "",
+      "city": "",
+      "phone": "",
+      "checked": false,
+      "id": 26
+    },
+    {
+      "name": "Makhabat",
+      "surname": "Abdisattarova",
+      "email": "maxabat_98-98@mail.ru",
+      "country": "Ky",
+      "city": "Bishkek",
+      "phone": "",
+      "checked": false,
+      "total": 1092,
+      "shop": [{
+        "item": {
+          "img": "https://cdn.discordapp.com/attachments/979601812472598619/980360810209636362/unknown.png",
+          "title": "Вечернее платье",
+          "price": 1365,
+          "size": "42-50",
+          "id": 55,
+          "text": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
+          "amount": "5",
+          "material": "Полиэстер",
+          "made": "Полиэстер",
+          "artikul": "Платье PL984/dakota",
+          "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
+          "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
+          "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
+          "discount": 20,
+          "color": "#73A39D",
+          "type": "summer"
+        },
+        "subPrice": 1365,
+        "discount": 273,
+        "count": 1
+      }],
+      "id": 27
+    },
+    {
+      "name": "Makhabat",
+      "surname": "Abdisattarova",
+      "email": "maxabat_98-98@mail.ru",
+      "country": "jj",
+      "city": "wertg",
+      "phone": "+99612345678",
+      "checked": false,
+      "total": 1228,
+      "shop": [{
+        "item": {
+          "img": "https://cdn.discordapp.com/attachments/979364144170041408/979364513835020328/unknown.png",
+          "title": "Вечернее платье",
+          "price": 1365,
+          "size": "42-50",
+          "id": 1,
+          "text": "За последние 35 лет бренд Bonucci из обычного производителя одежды превратился в широко узнаваемую марку, а его продукция – в синоним высокого качества и актуального стиля.",
+          "amount": "5",
+          "material": "Полиэстер",
+          "made": "Полиэстер",
+          "artikul": "Платье PL984/dakota",
+          "img2": "https://cdn.discordapp.com/attachments/979601812472598619/980370176388263976/unknown.png",
+          "img3": "https://cdn.discordapp.com/attachments/979601812472598619/980369976827449364/unknown.png",
+          "img4": "https://cdn.discordapp.com/attachments/979601812472598619/980361498134192188/unknown.png",
+          "discount": 10,
+          "color": "#73A39D",
+          "type": "hit"
+        },
+        "subPrice": 1365,
+        "discount": 137,
+        "count": 1
+      }],
+      "id": 28
     }
   ],
-  "colors": [
-    {
+  "colors": [{
       "color": "#73A39D",
-      "id": 1
+      "id": 1,
+      "status": false
     },
     {
       "color": "#84CC4C",
-      "id": 2
+      "id": 2,
+      "status": false
     },
     {
       "color": "#B5A8A1",
-      "id": 3
+      "id": 3,
+      "status": false
     },
     {
       "color": "#AB844A",
-      "id": 4
+      "id": 4,
+      "status": false
     },
     {
       "color": "#6977F0",
-      "id": 5
+      "id": 5,
+      "status": false
     },
     {
       "color": "#D1D1D1",
-      "id": 6
+      "id": 6,
+      "status": false
     },
     {
       "color": "#141414",
-      "id": 7
+      "id": 7,
+      "status": false
     },
     {
       "color": "#FF0000",
-      "id": 8
+      "id": 8,
+      "status": false
     }
   ]
 }

@@ -85,7 +85,7 @@ const Favorite = () => {
                 <div>
                     {fav?.products.length > 0 ? (
                         <>
-                            <p className="fav-main-text">Товары в избранном {favoriteLength}</p>
+                            <p className="fav-main-text">Товары в избранном: {favoriteLength}</p>
                             <div style={{display:"flex", flexWrap:"wrap"}}>
                                 {fav.products
                                     .filter((i, k)=> k < limit)

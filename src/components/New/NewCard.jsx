@@ -16,7 +16,7 @@ const NewCard = ({ item }) => {
     const discount = Math.ceil(item.price - (item.price * item.discount / 100))
     const navigate = useNavigate()
     return (
-        <Card sx={{width:"226px", height: "430px", marginRight: "8px", border:"none", backgroundColor:"transparent", color:"rgba(0, 0, 0, 0)", boxShadow:"none"}} key={item.id} square={true}>
+        <Card sx={{width:"226px", height: "438px", marginRight: "8px", border:"none", backgroundColor:"transparent", color:"rgba(0, 0, 0, 0)", boxShadow:"none"}} key={item.id} square={true}>
             <CardActionArea>
                 {inFav ? (
                     <FavoriteIcon
@@ -57,7 +57,7 @@ const NewCard = ({ item }) => {
             <Typography variant="body2" color="text.secondary">
                 Размер : {item.size}
             </Typography>
-                <Color/>
+                <Color id={item.id}/>
             </CardContent>
             </CardActionArea>
         </Card>

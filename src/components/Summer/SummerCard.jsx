@@ -87,7 +87,7 @@ const SummerCard = ({ item }) => {
                 <Typography variant="body2" color="text.secondary">
                         Размер : {item.size}
                 </Typography>
-                    <Color/>
+                    <Color id={item.id}/>
                 </CardContent>
             </CardActionArea>
         </Card>

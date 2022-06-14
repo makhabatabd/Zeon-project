@@ -46,7 +46,8 @@ const Cart = () => {
                 {cart.products?.length > 0 ? (
                     <div className='main-cart-div'> 
                         <div style={{marginRight: "16px"}}>
-                        {cart.products?.map((item) => (
+                            {cart.products?.map((item) => {
+                            return (
                         <div style={{display:"flex", flexDirection:"column"}} key={item.item.id+item.item.color}>
                         <div className='cart-inner' >
                         <div className='cart-card'>
@@ -64,7 +65,7 @@ const Cart = () => {
                                                 </div>
                                                 <p className='cart-title'>Размер: {item.item.size}</p>
                                     <div className='cart-price'>{item.item.discount ?
-                                <div><span className='discount'>{Math.ceil(item.item.price - (item.item.price * item.item.discount / 100)).toLocaleString().replace(',', ' ')} p</span><span className='price-discount'>{item.item.price.toLocaleString().replace(',', ' ')} p</span></div> :  <p className='discount'>{item.item.price.toLocaleString().replace(',', ' ')} p</p>} </div>
+                                                    <div><span className='discount'>{Math.ceil(item.item.price - (item.item.price * item.item.discount / 100)).toLocaleString().replace(',', ' ')} p</span><span className='price-discount'>{item.item.price.toLocaleString().replace(',', ' ')} p</span></div> : <p className='discount'>{item.item.price.toLocaleString().replace(',', ' ')} p</p>} </div>
                                 <button className='count'
                                     onClick={() =>
                                     changeProductCount(item.count - 1, item.item.color, item.item.id)
@@ -93,7 +94,8 @@ const Cart = () => {
                         </div>
                         </div>
                        </div>
-                        ))}
+                        )
+                        })}
                         </div>
                         <div className='cart-payment'>
                             <div className='mini-payment'>

@@ -41,6 +41,7 @@ const FavoriteContextProvider = ({ children }) => {
       payload: fav,
     });
   };
+  
   const addDelToFav = (product) => {
     let fav = createFavFromLS();
     let newProd = {
